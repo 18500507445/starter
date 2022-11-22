@@ -3,7 +3,7 @@
 * 准备事项
 
 ### 结构介绍
-1.nova-common
+1.starter-common
 * 通用工具包
 
 
