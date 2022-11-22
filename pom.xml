@@ -5,7 +5,7 @@
 
     <groupId>com.starter</groupId>
     <artifactId>starter</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>starter-1.0</version>
     <name>starter</name>
     <description>快速开发api(接口)和admin(后台)</description>
 
@@ -17,13 +17,22 @@
     </developers>
 
     <modules>
-
+        <module>starter-admin</module>
+        <module>starter-api</module>
+        <module>starter-business</module>
+        <module>starter-common</module>
+        <module>starter-framework</module>
+        <module>starter-system</module>
+        <module>starter-platform</module>
+        <module>starter-job</module>
     </modules>
 
     <packaging>pom</packaging>
 
     <properties>
+        <starter.version>starter-1.0</starter.version>
         <java.version>1.8</java.version>
+        <boot.version>2.7.5</boot.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
@@ -40,7 +49,8 @@
         <commons.fileupload.version>1.4</commons.fileupload.version>
         <poi.version>4.1.2</poi.version>
         <velocity.version>2.3</velocity.version>
-        <fastjson.version>1.2.83</fastjson.version>
+        <hutool.version>5.8.9</hutool.version>
+        <xxl-job.version>2.3.1</xxl-job.version>
     </properties>
 
     <!-- 依赖声明 -->
@@ -50,7 +60,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>2.7.5</version>
+                <version>${boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -111,7 +121,7 @@
                 <version>${mybatis-spring-boot.version}</version>
             </dependency>
 
-            <!-- pagehelper 分页插件 -->
+            <!-- pageHelper 分页插件 -->
             <dependency>
                 <groupId>com.github.pagehelper</groupId>
                 <artifactId>pagehelper-spring-boot-starter</artifactId>
@@ -166,11 +176,88 @@
                 <version>${velocity.version}</version>
             </dependency>
 
-            <!-- 阿里JSON解析器 -->
+            <!-- 新增糊涂工具类，当前工具类非常全面 API https://apidoc.gitee.com/loolly/hutool-all -->
             <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>fastjson</artifactId>
-                <version>${fastjson.version}</version>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+
+            <!--lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <optional>true</optional>
+            </dependency>
+
+            <!--xxl-job -->
+            <dependency>
+                <groupId>com.xuxueli</groupId>
+                <artifactId>xxl-job-core</artifactId>
+                <version>${xxl-job.version}</version>
+            </dependency>
+
+            <!-- 核心模块 -->
+            <dependency>
+                <groupId>com.starter</groupId>
+                <artifactId>starter-framework</artifactId>
+                <version>${starter.version}</version>
+            </dependency>
+
+            <!-- 通用工具 -->
+            <dependency>
+                <groupId>com.starter</groupId>
+                <artifactId>starter-common</artifactId>
+                <version>${starter.version}</version>
+            </dependency>
+
+            <!-- 代码生成 -->
+            <dependency>
+                <groupId>com.starter</groupId>
+                <artifactId>starter-generator</artifactId>
+                <version>${starter.version}</version>
+            </dependency>
+
+            <!-- 系统模块 -->
+            <dependency>
+                <groupId>com.starter</groupId>
+                <artifactId>starter-system</artifactId>
+                <version>${starter.version}</version>
+            </dependency>
+
+            <!-- 接口api -->
+            <dependency>
+                <groupId>com.starter</groupId>
+                <artifactId>starter-api</artifactId>
+                <version>${starter.version}</version>
+            </dependency>
+
+            <!-- 业务模块 -->
+            <dependency>
+                <groupId>com.starter</groupId>
+                <artifactId>starter-business</artifactId>
+                <version>${starter.version}</version>
+            </dependency>
+
+            <!-- 后台模块 -->
+            <dependency>
+                <groupId>com.starter</groupId>
+                <artifactId>starter-platform</artifactId>
+                <version>${starter.version}</version>
+            </dependency>
+
+            <!-- 消息模块 -->
+            <dependency>
+                <groupId>com.starter</groupId>
+                <artifactId>starter-jms</artifactId>
+                <version>${starter.version}</version>
+            </dependency>
+
+            <!-- 任务模块 -->
+            <dependency>
+                <groupId>com.starter</groupId>
+                <artifactId>starter-job</artifactId>
+                <version>${starter.version}</version>
             </dependency>
 
         </dependencies>
