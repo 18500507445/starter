@@ -21,11 +21,11 @@
         </dependency>
 
         <!-- 代码生成 -->
-<!--        <dependency>-->
-<!--            <groupId>com.starter</groupId>-->
-<!--            <artifactId>starter-generator</artifactId>-->
-<!--            <version>${starter.version}</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.starter</groupId>
+            <artifactId>starter-generator</artifactId>
+            <version>${starter.version}</version>
+        </dependency>
 
         <!-- 后台模块 -->
         <dependency>
