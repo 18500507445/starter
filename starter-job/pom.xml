@@ -27,10 +27,10 @@
         </dependency>
 
         <!-- 消息模块 -->
-<!--        <dependency>-->
-<!--            <groupId>com.starter</groupId>-->
-<!--            <artifactId>starter-jms</artifactId>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.starter</groupId>
+            <artifactId>starter-jms</artifactId>
+        </dependency>
 
         <!--xxl-job -->
         <dependency>
