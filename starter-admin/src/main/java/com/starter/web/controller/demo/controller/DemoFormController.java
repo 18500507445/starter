@@ -1,7 +1,8 @@
 package com.starter.web.controller.demo.controller;
 
 
-import cn.hutool.json.JSONUtil;
+import com.alibaba.fastjson.JSON;
+import com.rabbitmq.tools.json.JSONUtil;
 import com.starter.common.core.domain.AjaxResult;
 import com.starter.common.core.domain.CxSelect;
 import com.starter.common.json.JSONObject;
@@ -226,7 +227,7 @@ public class DemoFormController {
         cxList.add(cxSelectTB);
         cxList.add(cxSelectJD);
 
-        mmap.put("data", JSONUtil.toJsonStr(cxList));
+        mmap.put("data", JSON.toJSON(cxList));
         return prefix + "/cxselect";
     }
 

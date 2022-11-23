@@ -1,7 +1,7 @@
 package com.starter.generator.service.impl;
 
-import cn.hutool.json.JSONObject;
-import cn.hutool.json.JSONUtil;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.starter.common.constant.Constants;
 import com.starter.common.constant.GenConstants;
 import com.starter.common.core.text.CharsetKit;
@@ -119,7 +119,7 @@ public class GenTableServiceImpl implements IGenTableService {
     @Override
     @Transactional
     public void updateGenTable(GenTable genTable) {
-        String options = JSONUtil.toJsonStr(genTable.getParams());
+        String options = JSON.toJSONString(genTable.getParams());
         genTable.setOptions(options);
         int row = genTableMapper.updateGenTable(genTable);
         if (row > 0) {
@@ -370,13 +370,13 @@ public class GenTableServiceImpl implements IGenTableService {
     @Override
     public void validateEdit(GenTable genTable) {
         if (GenConstants.TPL_TREE.equals(genTable.getTplCategory())) {
-            String options = JSONUtil.toJsonStr(genTable.getParams());
-            JSONObject paramsObj = JSONUtil.parseObj(options);
-            if (StringUtils.isEmpty(paramsObj.getStr(GenConstants.TREE_CODE))) {
+            String options = JSON.toJSONString(genTable.getParams());
+            JSONObject paramsObj = JSONObject.parseObject(options);
+            if (StringUtils.isEmpty(paramsObj.getString(GenConstants.TREE_CODE))) {
                 throw new ServiceException("树编码字段不能为空");
-            } else if (StringUtils.isEmpty(paramsObj.getStr(GenConstants.TREE_PARENT_CODE))) {
+            } else if (StringUtils.isEmpty(paramsObj.getString(GenConstants.TREE_PARENT_CODE))) {
                 throw new ServiceException("树父编码字段不能为空");
-            } else if (StringUtils.isEmpty(paramsObj.getStr(GenConstants.TREE_NAME))) {
+            } else if (StringUtils.isEmpty(paramsObj.getString(GenConstants.TREE_NAME))) {
                 throw new ServiceException("树名称字段不能为空");
             }
         } else if (GenConstants.TPL_SUB.equals(genTable.getTplCategory())) {
@@ -434,13 +434,13 @@ public class GenTableServiceImpl implements IGenTableService {
      * @param genTable 设置后的生成对象
      */
     public void setTableFromOptions(GenTable genTable) {
-        JSONObject paramsObj = JSONUtil.parseObj(genTable.getOptions());
+        JSONObject paramsObj = JSONObject.parseObject(genTable.getOptions());
         if (StringUtils.isNotNull(paramsObj)) {
-            String treeCode = paramsObj.getStr(GenConstants.TREE_CODE);
-            String treeParentCode = paramsObj.getStr(GenConstants.TREE_PARENT_CODE);
-            String treeName = paramsObj.getStr(GenConstants.TREE_NAME);
-            String parentMenuId = paramsObj.getStr(GenConstants.PARENT_MENU_ID);
-            String parentMenuName = paramsObj.getStr(GenConstants.PARENT_MENU_NAME);
+            String treeCode = paramsObj.getString(GenConstants.TREE_CODE);
+            String treeParentCode = paramsObj.getString(GenConstants.TREE_PARENT_CODE);
+            String treeName = paramsObj.getString(GenConstants.TREE_NAME);
+            String parentMenuId = paramsObj.getString(GenConstants.PARENT_MENU_ID);
+            String parentMenuName = paramsObj.getString(GenConstants.PARENT_MENU_NAME);
 
             genTable.setTreeCode(treeCode);
             genTable.setTreeParentCode(treeParentCode);

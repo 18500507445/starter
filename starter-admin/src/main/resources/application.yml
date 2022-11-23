@@ -75,6 +75,10 @@ spring:
     restart:
       # 热部署开关
       enabled: true
+  # swagger版本过高，不兼容springboot2.6.0以后得版本
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
 
 # MyBatis
 mybatis:

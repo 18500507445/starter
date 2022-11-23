@@ -20,6 +20,7 @@ import springfox.documentation.spring.web.plugins.Docket;
  */
 @Configuration
 public class SwaggerConfig {
+
     /**
      * 是否开启swagger
      */
@@ -63,4 +64,5 @@ public class SwaggerConfig {
                 .version("版本号:" + GlobalConfig.getVersion())
                 .build();
     }
+
 }

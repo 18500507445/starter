@@ -56,9 +56,9 @@ spring:
                     config:
                         multi-statement-allow: true
     rabbitmq:
-        addresses: ip:port
-        username: username #账号
-        password: password #密码
+        addresses: 47.100.174.176:5672
+        username: root #账号
+        password: '@wangzehui123' #密码
         virtual-host: /
         listener:
             simple:

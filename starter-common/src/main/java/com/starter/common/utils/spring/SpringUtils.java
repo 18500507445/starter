@@ -139,4 +139,12 @@ public final class SpringUtils implements BeanFactoryPostProcessor, ApplicationC
         return applicationContext.getEnvironment().getRequiredProperty(key);
     }
 
+    /**
+     * 是否是测试
+     * @return true 测试环境
+     */
+    public static boolean isDev() {
+        return StringUtils.equals(getActiveProfile(), "dev");
+    }
+
 }

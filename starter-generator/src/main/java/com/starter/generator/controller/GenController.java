@@ -1,10 +1,10 @@
 package com.starter.generator.controller;
 
-import cn.hutool.json.JSONUtil;
 import com.alibaba.druid.DbType;
 import com.alibaba.druid.sql.SQLUtils;
 import com.alibaba.druid.sql.ast.SQLStatement;
 import com.alibaba.druid.sql.dialect.mysql.ast.statement.MySqlCreateTableStatement;
+import com.alibaba.fastjson.JSON;
 import com.starter.common.annotation.Log;
 import com.starter.common.core.controller.BaseController;
 import com.starter.common.core.domain.AjaxResult;
@@ -148,7 +148,7 @@ public class GenController extends BaseController {
             }
         }
         mmap.put("table", table);
-        mmap.put("data", JSONUtil.toJsonStr(cxSelect));
+        mmap.put("data", JSON.toJSON(cxSelect));
         return prefix + "/edit";
     }
 

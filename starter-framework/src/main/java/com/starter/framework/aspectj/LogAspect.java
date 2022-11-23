@@ -1,6 +1,7 @@
 package com.starter.framework.aspectj;
 
-import cn.hutool.json.JSONUtil;
+import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.support.spring.PropertyPreFilters;
 import com.starter.common.annotation.Log;
 import com.starter.common.core.domain.entity.SysUser;
 import com.starter.common.enums.BusinessStatus;
@@ -132,7 +133,7 @@ public class LogAspect {
         }
         // 是否需要保存response，参数和值
         if (log.isSaveResponseData() && StringUtils.isNotNull(jsonResult)) {
-            operLog.setJsonResult(StringUtils.substring(JSONUtil.toJsonStr(jsonResult), 0, 2000));
+            operLog.setJsonResult(StringUtils.substring(JSONObject.toJSONString(jsonResult), 0, 2000));
         }
     }
 
@@ -145,7 +146,7 @@ public class LogAspect {
     private void setRequestValue(JoinPoint joinPoint, SysOperLog operLog) throws Exception {
         Map<String, String[]> map = ServletUtils.getRequest().getParameterMap();
         if (StringUtils.isNotEmpty(map)) {
-            String params = JSONUtil.toJsonStr(map);
+            String params = JSONObject.toJSONString(map, excludePropertyPreFilter());
             operLog.setOperParam(StringUtils.substring(params, 0, 2000));
         } else {
             Object args = joinPoint.getArgs();
@@ -156,24 +157,31 @@ public class LogAspect {
         }
     }
 
+    /**
+     * 忽略敏感属性
+     */
+    public PropertyPreFilters.MySimplePropertyPreFilter excludePropertyPreFilter() {
+        return new PropertyPreFilters().addFilter().addExcludes(EXCLUDE_PROPERTIES);
+    }
 
     /**
      * 参数拼装
      */
     private String argsArrayToString(Object[] paramsArray) {
-        StringBuilder params = new StringBuilder();
+        String params = "";
         if (paramsArray != null && paramsArray.length > 0) {
             for (Object o : paramsArray) {
                 if (StringUtils.isNotNull(o) && !isFilterObject(o)) {
                     try {
-                        params.append(JSONUtil.toJsonStr(o)).append(" ");
+                        Object jsonObj = JSONObject.toJSONString(o, excludePropertyPreFilter());
+                        params += jsonObj.toString() + " ";
                     } catch (Exception ignored) {
 
                     }
                 }
             }
         }
-        return params.toString().trim();
+        return params.trim();
     }
 
     /**

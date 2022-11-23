@@ -1,7 +1,6 @@
 package com.starter.common.utils;
 
-import cn.hutool.json.JSONObject;
-import cn.hutool.json.JSONUtil;
+import com.alibaba.fastjson.JSONObject;
 import com.starter.common.config.GlobalConfig;
 import com.starter.common.constant.Constants;
 import com.starter.common.utils.http.HttpUtils;
@@ -38,9 +37,9 @@ public class AddressUtils {
                     log.error("获取地理位置异常 {}", ip);
                     return UNKNOWN;
                 }
-                JSONObject obj = JSONUtil.parseObj(rspStr);
-                String region = obj.getStr("pro");
-                String city = obj.getStr("city");
+                JSONObject obj = JSONObject.parseObject(rspStr);
+                String region = obj.getString("pro");
+                String city = obj.getString("city");
                 return String.format("%s %s", region, city);
             } catch (Exception e) {
                 log.error("获取地理位置异常 {}", e);
