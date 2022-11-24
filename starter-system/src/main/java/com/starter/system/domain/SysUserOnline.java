@@ -10,7 +10,7 @@ import com.starter.common.enums.OnlineStatus;
 /**
  * 当前在线会话 sys_user_online
  *
- * @author ruoyi
+ * @author wzh
  */
 public class SysUserOnline extends BaseEntity {
     private static final long serialVersionUID = 1L;

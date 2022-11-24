@@ -12,7 +12,7 @@ import com.starter.common.core.text.Convert;
 /**
  * 公告 服务层实现
  *
- * @author ruoyi
+ * @author wzh
  * @date 2018-06-25
  */
 @Service

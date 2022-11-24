@@ -19,7 +19,7 @@ import com.starter.common.utils.StringUtils;
 /**
  * 在线用户 服务层处理
  *
- * @author ruoyi
+ * @author wzh
  */
 @Service
 public class SysUserOnlineServiceImpl implements ISysUserOnlineService {

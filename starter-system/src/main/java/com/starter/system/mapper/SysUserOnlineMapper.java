@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * 在线用户 数据层
  *
- * @author ruoyi
+ * @author wzh
  */
 public interface SysUserOnlineMapper {
     /**

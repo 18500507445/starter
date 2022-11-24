@@ -11,7 +11,7 @@ import com.starter.common.core.domain.BaseEntity;
 /**
  * 参数配置表 sys_config
  *
- * @author ruoyi
+ * @author wzh
  */
 public class SysConfig extends BaseEntity {
     private static final long serialVersionUID = 1L;

@@ -25,7 +25,7 @@ import com.starter.common.utils.StringUtils;
 /**
  * 字典 业务层处理
  *
- * @author ruoyi
+ * @author wzh
  */
 @Service
 public class SysDictTypeServiceImpl implements ISysDictTypeService {

@@ -24,7 +24,7 @@ import com.starter.system.service.ISysDeptService;
 /**
  * 部门管理 服务实现
  *
- * @author ruoyi
+ * @author wzh
  */
 @Service
 public class SysDeptServiceImpl implements ISysDeptService {

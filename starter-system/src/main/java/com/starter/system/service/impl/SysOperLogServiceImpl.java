@@ -12,7 +12,7 @@ import com.starter.common.core.text.Convert;
 /**
  * 操作日志 服务层处理
  *
- * @author ruoyi
+ * @author wzh
  */
 @Service
 public class SysOperLogServiceImpl implements ISysOperLogService {
