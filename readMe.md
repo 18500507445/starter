@@ -7,3 +7,7 @@
 * 通用工具包
 
 
+### 注意事项
+* ApplicationConfig扫描路径
+* CaptchaConfig-getKaptchaBeanMath(验证码文本生成器)路径
+
