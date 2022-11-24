@@ -7,7 +7,7 @@ import com.starter.common.core.text.Convert;
 /**
  * 权限信息
  *
- * @author ruoyi
+ * @author wzh
  */
 public class PermissionContextHolder {
     private static final String PERMISSION_CONTEXT_ATTRIBUTES = "PERMISSION_CONTEXT";

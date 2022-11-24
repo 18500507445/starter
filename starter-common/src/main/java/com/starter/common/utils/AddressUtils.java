@@ -10,7 +10,7 @@ import com.starter.common.utils.http.HttpUtils;
 /**
  * 获取地址类
  *
- * @author ruoyi
+ * @author wzh
  */
 public class AddressUtils {
     private static final Logger log = LoggerFactory.getLogger(AddressUtils.class);

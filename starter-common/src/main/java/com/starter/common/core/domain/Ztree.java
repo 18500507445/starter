@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Ztree树结构实体类
  *
- * @author ruoyi
+ * @author wzh
  */
 public class Ztree implements Serializable {
     private static final long serialVersionUID = 1L;

@@ -12,7 +12,7 @@ import com.starter.common.utils.bean.BeanUtils;
 /**
  * shiro 工具类
  *
- * @author ruoyi
+ * @author wzh
  */
 public class ShiroUtils {
     public static Subject getSubject() {

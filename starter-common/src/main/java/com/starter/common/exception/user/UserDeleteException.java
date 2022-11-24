@@ -3,7 +3,7 @@ package com.starter.common.exception.user;
 /**
  * 用户账号已被删除
  *
- * @author ruoyi
+ * @author wzh
  */
 public class UserDeleteException extends UserException {
     private static final long serialVersionUID = 1L;

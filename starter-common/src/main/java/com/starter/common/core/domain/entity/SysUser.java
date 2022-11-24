@@ -17,7 +17,7 @@ import com.starter.common.xss.Xss;
 /**
  * 用户对象 sys_user
  *
- * @author ruoyi
+ * @author wzh
  */
 public class SysUser extends BaseEntity {
     private static final long serialVersionUID = 1L;

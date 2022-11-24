@@ -15,7 +15,7 @@ import org.slf4j.LoggerFactory;
 /**
  * permission 工具类
  *
- * @author ruoyi
+ * @author wzh
  */
 public class PermissionUtils {
     private static final Logger log = LoggerFactory.getLogger(PermissionUtils.class);

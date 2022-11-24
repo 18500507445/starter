@@ -3,7 +3,7 @@ package com.starter.common.constant;
 /**
  * 权限通用常量
  *
- * @author ruoyi
+ * @author wzh
  */
 public class PermissionConstants {
     /**

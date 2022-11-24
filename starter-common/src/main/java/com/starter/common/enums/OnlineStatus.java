@@ -3,7 +3,7 @@ package com.starter.common.enums;
 /**
  * 用户会话
  *
- * @author ruoyi
+ * @author wzh
  */
 public enum OnlineStatus {
     /**

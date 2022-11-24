@@ -6,7 +6,7 @@ import com.starter.common.exception.UtilException;
 /**
  * sql操作工具类
  *
- * @author ruoyi
+ * @author wzh
  */
 public class SqlUtil {
     /**

@@ -3,7 +3,7 @@ package com.starter.common.enums;
 /**
  * 数据源
  *
- * @author ruoyi
+ * @author wzh
  */
 public enum DataSourceType {
     /**

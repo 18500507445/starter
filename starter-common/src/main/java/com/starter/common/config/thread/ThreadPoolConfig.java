@@ -13,7 +13,7 @@ import com.starter.common.utils.Threads;
 /**
  * 线程池配置
  *
- * @author ruoyi
+ * @author wzh
  **/
 @Configuration
 public class ThreadPoolConfig {

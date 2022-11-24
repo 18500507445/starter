@@ -9,7 +9,7 @@ import com.starter.common.constant.Constants;
 /**
  * 字典工具类
  *
- * @author ruoyi
+ * @author wzh
  */
 @Component
 public class DictUtils {

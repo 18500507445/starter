@@ -19,7 +19,7 @@ import com.starter.common.utils.uuid.Seq;
 /**
  * 文件上传工具类
  *
- * @author ruoyi
+ * @author wzh
  */
 public class FileUploadUtils {
     /**
