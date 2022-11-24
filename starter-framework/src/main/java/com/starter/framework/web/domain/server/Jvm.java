@@ -8,7 +8,7 @@ import com.starter.common.utils.DateUtils;
 /**
  * JVM相关信息
  *
- * @author ruoyi
+ * @author wzh
  */
 public class Jvm {
     /**

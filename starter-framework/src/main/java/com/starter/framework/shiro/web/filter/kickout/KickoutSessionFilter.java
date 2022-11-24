@@ -27,7 +27,7 @@ import com.starter.common.utils.ShiroUtils;
 /**
  * 登录帐号控制过滤器
  *
- * @author ruoyi
+ * @author wzh
  */
 public class KickoutSessionFilter extends AccessControlFilter {
     private final static ObjectMapper objectMapper = new ObjectMapper();

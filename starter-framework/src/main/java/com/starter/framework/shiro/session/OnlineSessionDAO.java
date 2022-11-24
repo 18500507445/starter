@@ -16,7 +16,7 @@ import com.starter.framework.manager.factory.AsyncFactory;
 /**
  * 针对自定义的ShiroSession的db操作
  *
- * @author ruoyi
+ * @author wzh
  */
 public class OnlineSessionDAO extends EnterpriseCacheSessionDAO {
     /**

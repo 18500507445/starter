@@ -29,7 +29,7 @@ import com.starter.system.service.ISysUserService;
 /**
  * 登录校验方法
  *
- * @author ruoyi
+ * @author wzh
  */
 @Component
 public class SysLoginService {

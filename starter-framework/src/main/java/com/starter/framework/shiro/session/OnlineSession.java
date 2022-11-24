@@ -8,7 +8,7 @@ import com.starter.common.enums.OnlineStatus;
 /**
  * 在线用户会话属性
  *
- * @author ruoyi
+ * @author wzh
  */
 public class OnlineSession extends SimpleSession {
     private static final long serialVersionUID = 1L;

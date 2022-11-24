@@ -8,19 +8,17 @@ import com.starter.common.core.controller.BaseController;
 
 /**
  * druid 监控
- * 
- * @author ruoyi
+ *
+ * @author wzh
  */
 @Controller
 @RequestMapping("/monitor/data")
-public class DruidController extends BaseController
-{
+public class DruidController extends BaseController {
     private String prefix = "/druid";
 
     @RequiresPermissions("monitor:data:view")
     @GetMapping()
-    public String index()
-    {
+    public String index() {
         return redirect(prefix + "/index.html");
     }
 }

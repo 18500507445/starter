@@ -7,7 +7,7 @@ import com.starter.system.service.ISysConfigService;
 /**
  * RuoYi首创 html调用 thymeleaf 实现参数管理
  *
- * @author ruoyi
+ * @author wzh
  */
 @Service("config")
 public class ConfigService {

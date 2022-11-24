@@ -11,7 +11,7 @@ import com.starter.framework.shiro.session.OnlineSessionDAO;
 /**
  * 同步Session数据到Db
  *
- * @author ruoyi
+ * @author wzh
  */
 public class SyncOnlineSessionFilter extends PathMatchingFilter {
     private OnlineSessionDAO onlineSessionDAO;

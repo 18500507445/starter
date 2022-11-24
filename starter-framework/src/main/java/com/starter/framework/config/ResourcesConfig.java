@@ -14,7 +14,7 @@ import com.starter.framework.interceptor.RepeatSubmitInterceptor;
 /**
  * 通用配置
  *
- * @author ruoyi
+ * @author wzh
  */
 @Configuration
 public class ResourcesConfig implements WebMvcConfigurer {

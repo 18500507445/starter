@@ -28,7 +28,7 @@ import com.starter.framework.datasource.DynamicDataSource;
 /**
  * druid 配置多数据源
  *
- * @author ruoyi
+ * @author wzh
  */
 @Configuration
 public class DruidConfig {

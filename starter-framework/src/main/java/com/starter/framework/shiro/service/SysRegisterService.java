@@ -18,7 +18,7 @@ import com.starter.system.service.ISysUserService;
 /**
  * 注册校验方法
  *
- * @author ruoyi
+ * @author wzh
  */
 @Component
 public class SysRegisterService {

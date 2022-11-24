@@ -19,7 +19,7 @@ import com.starter.common.utils.security.PermissionUtils;
 /**
  * 全局异常处理器
  *
- * @author ruoyi
+ * @author wzh
  */
 @RestControllerAdvice
 public class GlobalExceptionHandler {

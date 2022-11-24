@@ -19,7 +19,7 @@ import com.starter.framework.shiro.session.OnlineSessionDAO;
 /**
  * 自定义访问控制
  *
- * @author ruoyi
+ * @author wzh
  */
 public class OnlineSessionFilter extends AccessControlFilter {
     /**

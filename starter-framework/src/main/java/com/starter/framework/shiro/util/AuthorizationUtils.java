@@ -7,7 +7,7 @@ import com.starter.framework.shiro.realm.UserRealm;
 /**
  * 用户授权信息
  *
- * @author ruoyi
+ * @author wzh
  */
 public class AuthorizationUtils {
     /**
