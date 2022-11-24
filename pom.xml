@@ -17,7 +17,11 @@
     </developers>
 
     <modules>
-
+        <module>starter-admin</module>
+        <module>starter-common</module>
+        <module>starter-framework</module>
+        <module>starter-system</module>
+        <module>starter-generator</module>
 
     </modules>
 
