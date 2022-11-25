@@ -9,28 +9,18 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>starter-generator</artifactId>
-    <description>generator代码生成</description>
+    <artifactId>starter-mq</artifactId>
+    <description>消息队列模块</description>
 
     <dependencies>
 
-        <!--velocity代码生成使用模板 -->
-        <dependency>
-            <groupId>org.apache.velocity</groupId>
-            <artifactId>velocity-engine-core</artifactId>
-        </dependency>
-
-        <!-- 通用工具-->
+        <!-- 核心模块-->
         <dependency>
             <groupId>com.starter</groupId>
-            <artifactId>starter-common</artifactId>
+            <artifactId>starter-framework</artifactId>
         </dependency>
 
-        <!-- 阿里数据库连接池 -->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid-spring-boot-starter</artifactId>
-        </dependency>
+
 
     </dependencies>
 

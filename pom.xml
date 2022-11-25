@@ -22,7 +22,9 @@
         <module>starter-framework</module>
         <module>starter-system</module>
         <module>starter-generator</module>
+        <module>starter-business</module>
         <module>starter-job</module>
+        <module>starter-mq</module>
 
     </modules>
 
