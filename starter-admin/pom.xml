@@ -61,6 +61,12 @@
             <artifactId>starter-generator</artifactId>
         </dependency>
 
+        <!-- 定时任务模块-->
+        <dependency>
+            <groupId>com.starter</groupId>
+            <artifactId>starter-job</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
