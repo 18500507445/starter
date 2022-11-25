@@ -1,12 +1,10 @@
 package com.starter.framework.config;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import javax.servlet.Filter;
-
+import at.pollux.thymeleaf.shiro.dialect.ShiroDialect;
+import com.starter.common.constant.Constants;
+import com.starter.common.utils.StringUtils;
+import com.starter.common.utils.security.CipherUtils;
+import com.starter.common.utils.spring.SpringUtils;
 import com.starter.framework.shiro.realm.UserRealm;
 import com.starter.framework.shiro.session.OnlineSessionDAO;
 import com.starter.framework.shiro.session.OnlineSessionFactory;
@@ -18,6 +16,7 @@ import com.starter.framework.shiro.web.filter.online.OnlineSessionFilter;
 import com.starter.framework.shiro.web.filter.sync.SyncOnlineSessionFilter;
 import com.starter.framework.shiro.web.session.OnlineWebSessionManager;
 import com.starter.framework.shiro.web.session.SpringSessionValidationScheduler;
+import net.sf.ehcache.CacheManager;
 import org.apache.commons.io.IOUtils;
 import org.apache.shiro.cache.ehcache.EhCacheManager;
 import org.apache.shiro.codec.Base64;
@@ -33,11 +32,13 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import com.starter.common.constant.Constants;
-import com.starter.common.utils.StringUtils;
-import com.starter.common.utils.security.CipherUtils;
-import com.starter.common.utils.spring.SpringUtils;
-import at.pollux.thymeleaf.shiro.dialect.ShiroDialect;
+
+import javax.servlet.Filter;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * 权限配置加载
@@ -135,10 +136,10 @@ public class ShiroConfig {
      */
     @Bean
     public EhCacheManager getEhCacheManager() {
-        net.sf.ehcache.CacheManager cacheManager = net.sf.ehcache.CacheManager.getCacheManager("ruoyi");
+        CacheManager cacheManager = CacheManager.getCacheManager("starter");
         EhCacheManager em = new EhCacheManager();
         if (StringUtils.isNull(cacheManager)) {
-            em.setCacheManager(new net.sf.ehcache.CacheManager(getCacheManagerConfigFileInputStream()));
+            em.setCacheManager(new CacheManager(getCacheManagerConfigFileInputStream()));
             return em;
         } else {
             em.setCacheManager(cacheManager);
@@ -155,8 +156,7 @@ public class ShiroConfig {
         try {
             inputStream = ResourceUtils.getInputStreamForPath(configFile);
             byte[] b = IOUtils.toByteArray(inputStream);
-            InputStream in = new ByteArrayInputStream(b);
-            return in;
+            return new ByteArrayInputStream(b);
         } catch (IOException e) {
             throw new ConfigurationException(
                     "Unable to obtain input stream for cacheManagerConfigFile [" + configFile + "]", e);
@@ -181,8 +181,7 @@ public class ShiroConfig {
      */
     @Bean
     public OnlineSessionDAO sessionDAO() {
-        OnlineSessionDAO sessionDAO = new OnlineSessionDAO();
-        return sessionDAO;
+        return new OnlineSessionDAO();
     }
 
     /**
@@ -190,8 +189,7 @@ public class ShiroConfig {
      */
     @Bean
     public OnlineSessionFactory sessionFactory() {
-        OnlineSessionFactory sessionFactory = new OnlineSessionFactory();
-        return sessionFactory;
+        return new OnlineSessionFactory();
     }
 
     /**
@@ -205,7 +203,7 @@ public class ShiroConfig {
         // 删除过期的session
         manager.setDeleteInvalidSessions(true);
         // 设置全局session超时时间
-        manager.setGlobalSessionTimeout(expireTime * 60 * 1000);
+        manager.setGlobalSessionTimeout(expireTime * 60 * 1000L);
         // 去掉 JSESSIONID
         manager.setSessionIdUrlRewritingEnabled(false);
         // 定义要使用的无效的Session定时调度器
