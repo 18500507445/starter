@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
-import com.starter.common.config.RuoYiConfig;
+import com.starter.common.config.GlobalConfig;
 import com.starter.common.config.ServerConfig;
 import com.starter.common.constant.Constants;
 import com.starter.common.core.domain.AjaxResult;
@@ -51,7 +51,7 @@ public class CommonController {
                 throw new Exception(StringUtils.format("文件名称({})非法，不允许下载。 ", fileName));
             }
             String realFileName = System.currentTimeMillis() + fileName.substring(fileName.indexOf("_") + 1);
-            String filePath = RuoYiConfig.getDownloadPath() + fileName;
+            String filePath = GlobalConfig.getDownloadPath() + fileName;
 
             response.setContentType(MediaType.APPLICATION_OCTET_STREAM_VALUE);
             FileUtils.setAttachmentResponseHeader(response, realFileName);
@@ -72,7 +72,7 @@ public class CommonController {
     public AjaxResult uploadFile(MultipartFile file) throws Exception {
         try {
             // 上传文件路径
-            String filePath = RuoYiConfig.getUploadPath();
+            String filePath = GlobalConfig.getUploadPath();
             // 上传并返回新文件名称
             String fileName = FileUploadUtils.upload(filePath, file);
             String url = serverConfig.getUrl() + fileName;
@@ -95,7 +95,7 @@ public class CommonController {
     public AjaxResult uploadFiles(List<MultipartFile> files) throws Exception {
         try {
             // 上传文件路径
-            String filePath = RuoYiConfig.getUploadPath();
+            String filePath = GlobalConfig.getUploadPath();
             List<String> urls = new ArrayList<String>();
             List<String> fileNames = new ArrayList<String>();
             List<String> newFileNames = new ArrayList<String>();
@@ -131,7 +131,7 @@ public class CommonController {
                 throw new Exception(StringUtils.format("资源文件({})非法，不允许下载。 ", resource));
             }
             // 本地资源路径
-            String localPath = RuoYiConfig.getProfile();
+            String localPath = GlobalConfig.getProfile();
             // 数据库资源地址
             String downloadPath = localPath + StringUtils.substringAfter(resource, Constants.RESOURCE_PREFIX);
             // 下载名称

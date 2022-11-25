@@ -12,7 +12,7 @@ import java.nio.charset.StandardCharsets;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.starter.common.config.RuoYiConfig;
+import com.starter.common.config.GlobalConfig;
 import com.starter.common.utils.DateUtils;
 import com.starter.common.utils.StringUtils;
 import org.apache.commons.io.FilenameUtils;
@@ -64,7 +64,7 @@ public class FileUtils {
      * @throws IOException IO异常
      */
     public static String writeImportBytes(byte[] data) throws IOException {
-        return writeBytes(data, RuoYiConfig.getImportPath());
+        return writeBytes(data, GlobalConfig.getImportPath());
     }
 
     /**

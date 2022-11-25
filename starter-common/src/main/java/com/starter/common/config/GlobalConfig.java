@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @ConfigurationProperties(prefix = "ruoyi")
-public class RuoYiConfig {
+public class GlobalConfig {
     /**
      * 项目名称
      */
@@ -46,7 +46,7 @@ public class RuoYiConfig {
     }
 
     public void setName(String name) {
-        RuoYiConfig.name = name;
+        GlobalConfig.name = name;
     }
 
     public static String getVersion() {
@@ -54,7 +54,7 @@ public class RuoYiConfig {
     }
 
     public void setVersion(String version) {
-        RuoYiConfig.version = version;
+        GlobalConfig.version = version;
     }
 
     public static String getCopyrightYear() {
@@ -62,7 +62,7 @@ public class RuoYiConfig {
     }
 
     public void setCopyrightYear(String copyrightYear) {
-        RuoYiConfig.copyrightYear = copyrightYear;
+        GlobalConfig.copyrightYear = copyrightYear;
     }
 
     public static boolean isDemoEnabled() {
@@ -70,7 +70,7 @@ public class RuoYiConfig {
     }
 
     public void setDemoEnabled(boolean demoEnabled) {
-        RuoYiConfig.demoEnabled = demoEnabled;
+        GlobalConfig.demoEnabled = demoEnabled;
     }
 
     public static String getProfile() {
@@ -78,7 +78,7 @@ public class RuoYiConfig {
     }
 
     public void setProfile(String profile) {
-        RuoYiConfig.profile = profile;
+        GlobalConfig.profile = profile;
     }
 
     public static boolean isAddressEnabled() {
@@ -86,7 +86,7 @@ public class RuoYiConfig {
     }
 
     public void setAddressEnabled(boolean addressEnabled) {
-        RuoYiConfig.addressEnabled = addressEnabled;
+        GlobalConfig.addressEnabled = addressEnabled;
     }
 
     /**

@@ -75,7 +75,7 @@ import com.starter.common.annotation.Excel;
 import com.starter.common.annotation.Excel.ColumnType;
 import com.starter.common.annotation.Excel.Type;
 import com.starter.common.annotation.Excels;
-import com.starter.common.config.RuoYiConfig;
+import com.starter.common.config.GlobalConfig;
 import com.starter.common.core.text.Convert;
 import com.starter.common.exception.UtilException;
 import com.starter.common.utils.DateUtils;
@@ -1130,7 +1130,7 @@ public class ExcelUtil<T> {
      * @param filename 文件名称
      */
     public String getAbsoluteFile(String filename) {
-        String downloadPath = RuoYiConfig.getDownloadPath() + filename;
+        String downloadPath = GlobalConfig.getDownloadPath() + filename;
         File desc = new File(downloadPath);
         if (!desc.getParentFile().exists()) {
             desc.getParentFile().mkdirs();

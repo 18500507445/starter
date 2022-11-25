@@ -7,7 +7,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.Arrays;
 
-import com.starter.common.config.RuoYiConfig;
+import com.starter.common.config.GlobalConfig;
 import com.starter.common.constant.Constants;
 import com.starter.common.utils.StringUtils;
 import org.apache.poi.util.IOUtils;
@@ -64,7 +64,7 @@ public class ImageUtils {
                 in = urlConnection.getInputStream();
             } else {
                 // 本机地址
-                String localPath = RuoYiConfig.getProfile();
+                String localPath = GlobalConfig.getProfile();
                 String downloadPath = localPath + StringUtils.substringAfter(url, Constants.RESOURCE_PREFIX);
                 in = new FileInputStream(downloadPath);
             }

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import com.starter.common.annotation.Log;
-import com.starter.common.config.RuoYiConfig;
+import com.starter.common.config.GlobalConfig;
 import com.starter.common.constant.UserConstants;
 import com.starter.common.core.controller.BaseController;
 import com.starter.common.core.domain.AjaxResult;
@@ -150,7 +150,7 @@ public class SysProfileController extends BaseController {
         SysUser currentUser = getSysUser();
         try {
             if (!file.isEmpty()) {
-                String avatar = FileUploadUtils.upload(RuoYiConfig.getAvatarPath(), file, MimeTypeUtils.IMAGE_EXTENSION);
+                String avatar = FileUploadUtils.upload(GlobalConfig.getAvatarPath(), file, MimeTypeUtils.IMAGE_EXTENSION);
                 currentUser.setAvatar(avatar);
                 if (userService.updateUserInfo(currentUser) > 0) {
                     setSysUser(userService.selectUserById(currentUser.getUserId()));

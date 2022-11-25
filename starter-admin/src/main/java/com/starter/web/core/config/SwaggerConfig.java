@@ -1,6 +1,6 @@
 package com.starter.web.core.config;
 
-import com.starter.common.config.RuoYiConfig;
+import com.starter.common.config.GlobalConfig;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -58,9 +58,9 @@ public class SwaggerConfig {
                 // 描述
                 .description("描述：用于管理集团旗下公司的人员信息,具体包括XXX,XXX模块...")
                 // 作者信息
-                .contact(new Contact(RuoYiConfig.getName(), null, null))
+                .contact(new Contact(GlobalConfig.getName(), null, null))
                 // 版本
-                .version("版本号:" + RuoYiConfig.getVersion())
+                .version("版本号:" + GlobalConfig.getVersion())
                 .build();
     }
 }
