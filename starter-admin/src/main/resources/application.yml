@@ -87,10 +87,14 @@ mybatis:
     configLocation: classpath:mybatis/mybatis-config.xml
 
 # PageHelper分页插件
-pagehelper: 
+pagehelper:
   helperDialect: mysql
+  reasonable: false
+  pageSizeZero: true
+  rowBoundsWithCount: false
   supportMethodsArguments: true
-  params: count=countSql 
+  # autoRuntimeDialect: true
+  params: count=countSql
 
 # Shiro
 shiro:

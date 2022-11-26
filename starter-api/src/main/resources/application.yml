@@ -17,9 +17,6 @@ ruoyi:
 server:
   # 服务器的HTTP端口，默认为8080
   port: 8080
-  servlet:
-    # 应用的访问路径
-    context-path: /
   tomcat:
     # tomcat的URI编码
     uri-encoding: UTF-8
@@ -50,7 +47,7 @@ spring:
     mode: HTML
     encoding: utf-8
     # 禁用缓存
-    cache: false
+    cache: true
   # 资源信息
   messages:
     # 国际化资源文件路径
@@ -89,8 +86,12 @@ mybatis:
 # PageHelper分页插件
 pagehelper: 
   helperDialect: mysql
+  reasonable: false
+  pageSizeZero: true
+  rowBoundsWithCount: false
   supportMethodsArguments: true
-  params: count=countSql 
+  # autoRuntimeDialect: true
+  params: count=countSql
 
 # Shiro
 shiro:
