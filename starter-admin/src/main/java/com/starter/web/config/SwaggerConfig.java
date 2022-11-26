@@ -1,4 +1,4 @@
-package com.starter.web.core.config;
+package com.starter.web.config;
 
 import com.starter.common.config.GlobalConfig;
 import io.swagger.annotations.ApiOperation;

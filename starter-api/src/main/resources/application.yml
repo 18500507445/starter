@@ -17,9 +17,6 @@ ruoyi:
 server:
   # 服务器的HTTP端口，默认为8080
   port: 8080
-  servlet:
-    # 应用的访问路径
-    context-path: /
   tomcat:
     # tomcat的URI编码
     uri-encoding: UTF-8
@@ -34,7 +31,7 @@ server:
 # 日志配置
 logging:
   level:
-    com.ruoyi: debug
+    com.starter: info
     org.springframework: warn
 
 # 用户配置
