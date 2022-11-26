@@ -188,7 +188,7 @@
                 <version>${fastjson.version}</version>
             </dependency>
 
-            <!-- 新增糊涂工具类，当前工具类非常全面 API https://apidoc.gitee.com/loolly/hutool-all -->
+            <!-- 糊涂工具类，当前工具类非常全面 API https://apidoc.gitee.com/loolly/hutool-all -->
             <dependency>
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-all</artifactId>

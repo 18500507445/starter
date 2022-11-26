@@ -7,8 +7,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import cn.hutool.core.util.ObjectUtil;
 import com.starter.common.core.domain.AjaxResult;
 import com.starter.common.core.domain.entity.SysUser;
+import com.starter.common.utils.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.WebDataBinder;
@@ -18,11 +20,6 @@ import com.github.pagehelper.PageInfo;
 import com.starter.common.core.page.PageDomain;
 import com.starter.common.core.page.TableDataInfo;
 import com.starter.common.core.page.TableSupport;
-import com.starter.common.utils.DateUtils;
-import com.starter.common.utils.PageUtils;
-import com.starter.common.utils.ServletUtils;
-import com.starter.common.utils.ShiroUtils;
-import com.starter.common.utils.StringUtils;
 import com.starter.common.utils.sql.SqlUtil;
 
 /**
@@ -200,5 +197,39 @@ public class BaseController {
      */
     public String getLoginName() {
         return getSysUser().getLoginName();
+    }
+
+    /**
+     * 获取请求连接参数
+     *
+     * @param key
+     * @return
+     */
+    public String getValue(String key) {
+        HttpServletRequest request = getRequest();
+        String value = request.getParameter(key);
+        if (ObjectUtil.isEmpty(value)) {
+            value = request.getHeader(key);
+        }
+        return value;
+    }
+
+    /**
+     * 获取请求IP地址
+     */
+    public String getIp() {
+        String result = "";
+        String createIp = IpUtils.getIpAddr(getRequest());
+        if (org.apache.commons.lang3.StringUtils.isNotBlank(createIp)) {
+            String[] split = createIp.split(",");
+            if (split.length > 1) {
+                if (org.apache.commons.lang3.StringUtils.isNotBlank(split[1])) {
+                    result = split[1];
+                }
+            } else {
+                result = split[0];
+            }
+        }
+        return result.trim();
     }
 }
