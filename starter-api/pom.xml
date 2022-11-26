@@ -53,22 +53,10 @@
             <artifactId>starter-framework</artifactId>
         </dependency>
 
-        <!-- 代码生成 -->
+        <!-- 业务模块 -->
         <dependency>
             <groupId>com.starter</groupId>
-            <artifactId>starter-generator</artifactId>
-        </dependency>
-
-        <!-- 定时任务模块 -->
-        <dependency>
-            <groupId>com.starter</groupId>
-            <artifactId>starter-job</artifactId>
-        </dependency>
-
-        <!-- 后台模块 -->
-        <dependency>
-            <groupId>com.starter</groupId>
-            <artifactId>starter-platform</artifactId>
+            <artifactId>starter-business</artifactId>
         </dependency>
 
     </dependencies>
