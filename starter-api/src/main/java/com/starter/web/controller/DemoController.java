@@ -1,5 +1,6 @@
 package com.starter.web.controller;
 
+import cn.hutool.json.JSONUtil;
 import com.starter.business.entity.param.BaseParam;
 import com.starter.common.core.controller.BaseController;
 import com.starter.common.core.domain.AjaxResult;
@@ -25,6 +26,6 @@ public class DemoController extends BaseController {
     @PostMapping("demo")
     @ResponseBody
     public AjaxResult demo(BaseParam param) {
-        return AjaxResult.success(param);
+        return AjaxResult.success(JSONUtil.parseObj(param));
     }
 }
