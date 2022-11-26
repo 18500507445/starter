@@ -278,6 +278,11 @@ public class ShiroConfig {
         // 系统权限列表
         // filterChainDefinitionMap.putAll(SpringUtils.getBean(IMenuService.class).selectPermsAll());
 
+        //对外api接口
+        filterChainDefinitionMap.put("/api/**", "anon");
+        //监控
+        filterChainDefinitionMap.put("/monitor.jsp", "anon");
+
         Map<String, Filter> filters = new LinkedHashMap<String, Filter>();
         filters.put("onlineSession", onlineSessionFilter());
         filters.put("syncOnlineSession", syncOnlineSessionFilter());

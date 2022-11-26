@@ -12,5 +12,6 @@
 * CaptchaConfig-getKaptchaBeanMath(验证码文本生成器)路径
 * GlobalConfig
 * ShiroConfig.getEhCacheManager
+* ShiroConfig.shiroFilterFactoryBean(放开接口地址api)
 
 
