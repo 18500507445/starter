@@ -10,8 +10,8 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>jar</packaging>
 
-    <artifactId>starter-admin</artifactId>
-    <description>admin模块</description>
+    <artifactId>starter-api</artifactId>
+    <description>api模块</description>
 
     <dependencies>
 
@@ -53,22 +53,10 @@
             <artifactId>starter-framework</artifactId>
         </dependency>
 
-        <!-- 代码生成 -->
+        <!-- 业务模块 -->
         <dependency>
             <groupId>com.starter</groupId>
-            <artifactId>starter-generator</artifactId>
-        </dependency>
-
-        <!-- 定时任务模块 -->
-        <dependency>
-            <groupId>com.starter</groupId>
-            <artifactId>starter-job</artifactId>
-        </dependency>
-
-        <!-- 后台模块 -->
-        <dependency>
-            <groupId>com.starter</groupId>
-            <artifactId>starter-platform</artifactId>
+            <artifactId>starter-business</artifactId>
         </dependency>
 
     </dependencies>
@@ -91,15 +79,15 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>   
-                <groupId>org.apache.maven.plugins</groupId>   
-                <artifactId>maven-war-plugin</artifactId>   
-                <version>3.0.0</version>   
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.0.0</version>
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                     <warName>${project.artifactId}</warName>
-                </configuration>   
-            </plugin>   
+                </configuration>
+            </plugin>
         </plugins>
         <finalName>${project.artifactId}</finalName>
     </build>
