@@ -1,4 +1,4 @@
-package com.starter.web.controller;
+package com.starter.web;
 
 import com.starter.business.entity.param.BaseParam;
 import com.starter.common.core.controller.BaseController;
