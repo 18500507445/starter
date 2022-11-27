@@ -13,5 +13,6 @@
 * GlobalConfig
 * ShiroConfig.getEhCacheManager
 * ShiroConfig.shiroFilterFactoryBean(放开接口地址api)
+* FileUploadUtils.upload(上传图片到服务器)
 
 
