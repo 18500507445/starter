@@ -20,6 +20,7 @@
 * ShiroConfig.getEhCacheManager
 * ShiroConfig.shiroFilterFactoryBean(放开接口地址api)
 * FileUploadUtils.upload(上传图片到服务器)
+* 后台密码admin123
 
 ### 待完成
 * 上传图片服务器工具
