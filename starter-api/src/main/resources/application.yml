@@ -20,14 +20,17 @@ server:
   tomcat:
     # tomcat的URI编码
     uri-encoding: UTF-8
+    # 最多接收数，需要大于 max-connections + accept-count 超出的连接拒绝
+    max-connections: 10000
     # 连接数满后的排队数，默认为100
-    accept-count: 1000
+    accept-count: 500
     threads:
       # tomcat最大线程数，默认为200
       max: 800
       # Tomcat启动初始化的线程数，默认值10
-      min-spare: 100
- 
+      min-spare: 400
+    connection-timeout: 20000
+
 # 日志配置
 logging:
   level:
@@ -61,9 +64,9 @@ spring:
   servlet:
      multipart:
        # 单个文件大小
-       max-file-size:  10MB
+       max-file-size:  50MB
        # 设置总上传的文件大小
-       max-request-size:  20MB
+       max-request-size:  100MB
   # 服务模块
   devtools:
     restart:
