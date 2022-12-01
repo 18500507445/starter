@@ -16,7 +16,7 @@
 ### 注意事项
 * ApplicationConfig扫描路径
 * CaptchaConfig-getKaptchaBeanMath(验证码文本生成器)路径
-* GlobalConfig
+* GlobalConfig-ConfigurationProperties(prefix = "starter")读取的yml # 项目相关配置
 * ShiroConfig.getEhCacheManager
 * ShiroConfig.shiroFilterFactoryBean(放开接口地址api)
 * FileUploadUtils.upload(上传图片到服务器)
