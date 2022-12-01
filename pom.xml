@@ -3,9 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.starter</groupId>
     <artifactId>starter</artifactId>
+    <groupId>com.starter</groupId>
     <version>starter-1.0</version>
+
     <name>starter</name>
     <description>快速开发api(接口)和admin(后台)</description>
 
