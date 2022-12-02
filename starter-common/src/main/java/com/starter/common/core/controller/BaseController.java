@@ -223,11 +223,9 @@ public class BaseController {
         if (org.apache.commons.lang3.StringUtils.isNotBlank(createIp)) {
             String[] split = createIp.split(",");
             if (split.length > 1) {
-                if (org.apache.commons.lang3.StringUtils.isNotBlank(split[1])) {
-                    result = split[1];
+                if (org.apache.commons.lang3.StringUtils.isNotBlank(split[0])) {
+                    result = split[0];
                 }
-            } else {
-                result = split[0];
             }
         }
         return result.trim();
