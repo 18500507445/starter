@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import cn.hutool.core.util.ObjectUtil;
+import cn.hutool.core.util.StrUtil;
 import com.starter.common.core.domain.AjaxResult;
 import com.starter.common.core.domain.entity.SysUser;
 import com.starter.common.utils.*;
@@ -215,19 +216,35 @@ public class BaseController {
     }
 
     /**
-     * 获取请求IP地址
+     * 获取用户请求IP地址
      */
     public String getIp() {
         String result = "";
         String createIp = IpUtils.getIpAddr(getRequest());
-        if (org.apache.commons.lang3.StringUtils.isNotBlank(createIp)) {
+        if (StrUtil.isNotBlank(createIp)) {
             String[] split = createIp.split(",");
-            if (split.length > 1) {
-                if (org.apache.commons.lang3.StringUtils.isNotBlank(split[0])) {
+            if (split.length > 0) {
+                if (StrUtil.isNotBlank(split[0])) {
                     result = split[0];
                 }
             }
         }
         return result.trim();
+    }
+
+    /**
+     * 获取机器IP地址
+     */
+    public String getHostIp() {
+        String createIp = IpUtils.getIpAddr(getRequest());
+        if (StrUtil.isNotBlank(createIp)) {
+            String[] split = createIp.split(",");
+            if (split.length > 1) {
+                if (StrUtil.isNotBlank(split[1])) {
+                    return split[1];
+                }
+            }
+        }
+        return "";
     }
 }
