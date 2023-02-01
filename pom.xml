@@ -278,7 +278,6 @@
 
     <!--分别设置开发，生产环境-->
     <profiles>
-        <!-- 开发环境 -->
         <profile>
             <id>dev</id>
             <activation>
@@ -288,7 +287,7 @@
                 <environment>dev</environment>
             </properties>
         </profile>
-        <!-- 生产环境 -->
+
         <profile>
             <id>pro</id>
             <activation>
