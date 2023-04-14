@@ -151,9 +151,9 @@ swagger:
 
 xxl:
   job:
-    accessToken: 8DCyt4wLgedT3YqVFAc1E8wkL1p4ykug
+    accessToken: token
     admin:
-      addresses: http://172.30.16.74:8080
+      addresses: http://xxx.xx.xx.xx:8080
     executor:
       address:
       appname: xxl-job-starter-job

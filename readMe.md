@@ -9,7 +9,7 @@
 4. starter-framework：核心框架，包含springboot各种依赖、配置、拦截器、切面
 5. starter-generator：代码生成，模板配置
 6. starter-job：xxl-job执行器
-7. starter-mq：消息队列模块
+7. starter-mq：消息队列模块 集成rabbitMQ
 8. starter-platform：后台模块
 9. starter-system：后台系统模块
 
@@ -23,6 +23,4 @@
 * 后台密码admin123
 
 ### 待完成
-* 上传图片服务器工具
-* 集成mq
-
+* 上传图片服务器工具（可以考虑阿里云的oss）
