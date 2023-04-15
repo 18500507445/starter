@@ -1,4 +1,4 @@
-package com.starter.framework.aspectj;
+package com.starter.framework.aop;
 
 import java.util.ArrayList;
 import java.util.List;

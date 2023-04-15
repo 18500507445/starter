@@ -1,4 +1,4 @@
-package com.starter.framework.aspectj;
+package com.starter.framework.aop;
 
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.aspectj.lang.JoinPoint;
