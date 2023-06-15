@@ -1,13 +1,13 @@
 package com.starter.system.service.impl;
 
-import java.util.List;
-
+import com.starter.common.core.text.Convert;
 import com.starter.system.domain.SysLogininfor;
 import com.starter.system.mapper.SysLogininforMapper;
 import com.starter.system.service.ISysLogininforService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.starter.common.core.text.Convert;
+
+import java.util.List;
 
 /**
  * 系统访问日志情况信息 服务层处理

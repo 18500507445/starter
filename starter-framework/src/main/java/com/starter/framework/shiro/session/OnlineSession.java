@@ -1,9 +1,9 @@
 package com.starter.framework.shiro.session;
 
+import com.starter.common.enums.OnlineStatus;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import org.apache.shiro.session.mgt.SimpleSession;
-import com.starter.common.enums.OnlineStatus;
 
 /**
  * 在线用户会话属性

@@ -1,9 +1,9 @@
 package com.starter.common.xss;
 
+import com.starter.common.utils.html.EscapeUtil;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletRequestWrapper;
-
-import com.starter.common.utils.html.EscapeUtil;
 
 /**
  * XSS过滤处理

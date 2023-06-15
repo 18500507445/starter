@@ -1,13 +1,5 @@
 package com.starter.system.service.impl;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import com.starter.system.mapper.SysDeptMapper;
-import org.apache.commons.lang3.ArrayUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import com.starter.common.annotation.DataScope;
 import com.starter.common.constant.UserConstants;
 import com.starter.common.core.domain.Ztree;
@@ -19,7 +11,15 @@ import com.starter.common.exception.ServiceException;
 import com.starter.common.utils.ShiroUtils;
 import com.starter.common.utils.StringUtils;
 import com.starter.common.utils.spring.SpringUtils;
+import com.starter.system.mapper.SysDeptMapper;
 import com.starter.system.service.ISysDeptService;
+import org.apache.commons.lang3.ArrayUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 部门管理 服务实现

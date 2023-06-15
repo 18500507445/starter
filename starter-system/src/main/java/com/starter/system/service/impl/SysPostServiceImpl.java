@@ -1,17 +1,17 @@
 package com.starter.system.service.impl;
 
-import java.util.List;
-
+import com.starter.common.constant.UserConstants;
+import com.starter.common.core.text.Convert;
+import com.starter.common.exception.ServiceException;
+import com.starter.common.utils.StringUtils;
 import com.starter.system.domain.SysPost;
 import com.starter.system.mapper.SysPostMapper;
 import com.starter.system.mapper.SysUserPostMapper;
 import com.starter.system.service.ISysPostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.starter.common.constant.UserConstants;
-import com.starter.common.core.text.Convert;
-import com.starter.common.exception.ServiceException;
-import com.starter.common.utils.StringUtils;
+
+import java.util.List;
 
 /**
  * 岗位信息 服务层处理

@@ -1,7 +1,7 @@
 package com.starter.common.utils.sql;
 
-import com.starter.common.utils.StringUtils;
 import com.starter.common.exception.UtilException;
+import com.starter.common.utils.StringUtils;
 
 /**
  * sql操作工具类

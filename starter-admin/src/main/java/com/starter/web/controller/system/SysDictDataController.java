@@ -1,17 +1,5 @@
 package com.starter.web.controller.system;
 
-import java.util.List;
-
-import org.apache.shiro.authz.annotation.RequiresPermissions;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
-import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import com.starter.common.annotation.Log;
 import com.starter.common.core.controller.BaseController;
 import com.starter.common.core.domain.AjaxResult;
@@ -20,6 +8,14 @@ import com.starter.common.core.page.TableDataInfo;
 import com.starter.common.enums.BusinessType;
 import com.starter.common.utils.poi.ExcelUtil;
 import com.starter.system.service.ISysDictDataService;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * 数据字典信息

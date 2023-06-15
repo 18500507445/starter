@@ -1,21 +1,5 @@
 package com.starter.system.service.impl;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
-import javax.validation.Validator;
-
-import com.starter.system.domain.SysPost;
-import com.starter.system.domain.SysUserPost;
-import com.starter.system.domain.SysUserRole;
-import com.starter.system.service.ISysConfigService;
-import com.starter.system.service.ISysUserService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-import org.springframework.util.CollectionUtils;
 import com.starter.common.annotation.DataScope;
 import com.starter.common.constant.UserConstants;
 import com.starter.common.core.domain.entity.SysRole;
@@ -27,11 +11,23 @@ import com.starter.common.utils.StringUtils;
 import com.starter.common.utils.bean.BeanValidators;
 import com.starter.common.utils.security.Md5Utils;
 import com.starter.common.utils.spring.SpringUtils;
-import com.starter.system.mapper.SysPostMapper;
-import com.starter.system.mapper.SysRoleMapper;
-import com.starter.system.mapper.SysUserMapper;
-import com.starter.system.mapper.SysUserPostMapper;
-import com.starter.system.mapper.SysUserRoleMapper;
+import com.starter.system.domain.SysPost;
+import com.starter.system.domain.SysUserPost;
+import com.starter.system.domain.SysUserRole;
+import com.starter.system.mapper.*;
+import com.starter.system.service.ISysConfigService;
+import com.starter.system.service.ISysUserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.CollectionUtils;
+
+import javax.validation.Validator;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * 用户 业务层处理

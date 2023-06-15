@@ -1,7 +1,8 @@
 package com.starter.framework.aop;
 
-import java.util.Objects;
-
+import com.starter.common.annotation.DataSource;
+import com.starter.common.config.datasource.DynamicDataSourceContextHolder;
+import com.starter.common.utils.StringUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -12,9 +13,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
-import com.starter.common.annotation.DataSource;
-import com.starter.common.config.datasource.DynamicDataSourceContextHolder;
-import com.starter.common.utils.StringUtils;
+
+import java.util.Objects;
 
 /**
  * 多数据源处理

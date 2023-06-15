@@ -1,16 +1,16 @@
 package com.starter.web.controller.system;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import com.starter.common.core.controller.BaseController;
 import com.starter.common.core.domain.AjaxResult;
 import com.starter.common.core.domain.entity.SysUser;
 import com.starter.common.utils.StringUtils;
 import com.starter.framework.shiro.service.SysRegisterService;
 import com.starter.system.service.ISysConfigService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * 注册验证

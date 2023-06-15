@@ -1,12 +1,5 @@
 package com.starter.framework.shiro.web.filter;
 
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-
-import org.apache.shiro.session.SessionException;
-import org.apache.shiro.subject.Subject;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import com.starter.common.constant.Constants;
 import com.starter.common.core.domain.entity.SysUser;
 import com.starter.common.utils.MessageUtils;
@@ -16,6 +9,13 @@ import com.starter.common.utils.spring.SpringUtils;
 import com.starter.framework.manager.AsyncManager;
 import com.starter.framework.manager.factory.AsyncFactory;
 import com.starter.system.service.ISysUserOnlineService;
+import org.apache.shiro.session.SessionException;
+import org.apache.shiro.subject.Subject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 
 /**
  * 退出过滤器

@@ -1,9 +1,9 @@
 package com.starter.generator.service;
 
+import com.starter.generator.domain.GenTable;
+
 import java.util.List;
 import java.util.Map;
-
-import com.starter.generator.domain.GenTable;
 
 /**
  * 业务 服务层

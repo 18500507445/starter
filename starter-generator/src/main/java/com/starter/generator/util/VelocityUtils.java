@@ -1,10 +1,5 @@
 package com.starter.generator.util;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-
-import org.apache.velocity.VelocityContext;
 import com.alibaba.fastjson.JSONObject;
 import com.starter.common.constant.GenConstants;
 import com.starter.common.utils.DateUtils;
@@ -12,6 +7,11 @@ import com.starter.common.utils.StringUtils;
 import com.starter.generator.config.GenConfig;
 import com.starter.generator.domain.GenTable;
 import com.starter.generator.domain.GenTableColumn;
+import org.apache.velocity.VelocityContext;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 
 public class VelocityUtils {
     /**

@@ -1,8 +1,8 @@
 package com.starter.generator.service;
 
-import java.util.List;
-
 import com.starter.generator.domain.GenTableColumn;
+
+import java.util.List;
 
 /**
  * 业务字段 服务层

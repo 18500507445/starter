@@ -1,10 +1,12 @@
 package com.starter.web.controller.common;
 
-import java.util.ArrayList;
-import java.util.List;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
+import com.starter.common.config.GlobalConfig;
+import com.starter.common.config.ServerConfig;
+import com.starter.common.constant.Constants;
+import com.starter.common.core.domain.AjaxResult;
+import com.starter.common.utils.StringUtils;
+import com.starter.common.utils.file.FileUploadUtils;
+import com.starter.common.utils.file.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,13 +17,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
-import com.starter.common.config.GlobalConfig;
-import com.starter.common.config.ServerConfig;
-import com.starter.common.constant.Constants;
-import com.starter.common.core.domain.AjaxResult;
-import com.starter.common.utils.StringUtils;
-import com.starter.common.utils.file.FileUploadUtils;
-import com.starter.common.utils.file.FileUtils;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 通用请求处理

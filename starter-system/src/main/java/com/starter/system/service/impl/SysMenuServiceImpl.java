@@ -1,26 +1,19 @@
 package com.starter.system.service.impl;
 
-import java.text.MessageFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
-
-import com.starter.system.mapper.SysMenuMapper;
-import com.starter.system.mapper.SysRoleMenuMapper;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import com.starter.common.constant.UserConstants;
 import com.starter.common.core.domain.Ztree;
 import com.starter.common.core.domain.entity.SysMenu;
 import com.starter.common.core.domain.entity.SysRole;
 import com.starter.common.core.domain.entity.SysUser;
 import com.starter.common.utils.StringUtils;
+import com.starter.system.mapper.SysMenuMapper;
+import com.starter.system.mapper.SysRoleMenuMapper;
 import com.starter.system.service.ISysMenuService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.text.MessageFormat;
+import java.util.*;
 
 /**
  * 菜单 业务层处理

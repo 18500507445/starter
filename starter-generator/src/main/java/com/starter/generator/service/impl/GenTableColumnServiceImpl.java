@@ -1,13 +1,13 @@
 package com.starter.generator.service.impl;
 
-import java.util.List;
-
+import com.starter.common.core.text.Convert;
 import com.starter.generator.domain.GenTableColumn;
 import com.starter.generator.mapper.GenTableColumnMapper;
+import com.starter.generator.service.IGenTableColumnService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.starter.common.core.text.Convert;
-import com.starter.generator.service.IGenTableColumnService;
+
+import java.util.List;
 
 /**
  * 业务字段 服务层实现

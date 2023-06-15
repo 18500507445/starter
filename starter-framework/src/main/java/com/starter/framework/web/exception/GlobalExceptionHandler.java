@@ -1,7 +1,10 @@
 package com.starter.framework.web.exception;
 
-import javax.servlet.http.HttpServletRequest;
-
+import com.starter.common.core.domain.AjaxResult;
+import com.starter.common.exception.DemoModeException;
+import com.starter.common.exception.ServiceException;
+import com.starter.common.utils.ServletUtils;
+import com.starter.common.utils.security.PermissionUtils;
 import org.apache.shiro.authz.AuthorizationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,11 +13,8 @@ import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.ModelAndView;
-import com.starter.common.core.domain.AjaxResult;
-import com.starter.common.exception.DemoModeException;
-import com.starter.common.exception.ServiceException;
-import com.starter.common.utils.ServletUtils;
-import com.starter.common.utils.security.PermissionUtils;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * 全局异常处理器

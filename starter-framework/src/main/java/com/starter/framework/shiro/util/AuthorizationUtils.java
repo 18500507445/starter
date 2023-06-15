@@ -1,8 +1,8 @@
 package com.starter.framework.shiro.util;
 
+import com.starter.framework.shiro.realm.UserRealm;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.mgt.RealmSecurityManager;
-import com.starter.framework.shiro.realm.UserRealm;
 
 /**
  * 用户授权信息

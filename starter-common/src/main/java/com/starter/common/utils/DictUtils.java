@@ -1,10 +1,10 @@
 package com.starter.common.utils;
 
-import java.util.List;
-
+import com.starter.common.constant.Constants;
 import com.starter.common.core.domain.entity.SysDictData;
 import org.springframework.stereotype.Component;
-import com.starter.common.constant.Constants;
+
+import java.util.List;
 
 /**
  * 字典工具类

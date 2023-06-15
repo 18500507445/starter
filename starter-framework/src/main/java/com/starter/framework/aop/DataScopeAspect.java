@@ -1,12 +1,5 @@
 package com.starter.framework.aop;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
-import org.springframework.stereotype.Component;
 import com.starter.common.annotation.DataScope;
 import com.starter.common.core.context.PermissionContextHolder;
 import com.starter.common.core.domain.BaseEntity;
@@ -15,6 +8,13 @@ import com.starter.common.core.domain.entity.SysUser;
 import com.starter.common.core.text.Convert;
 import com.starter.common.utils.ShiroUtils;
 import com.starter.common.utils.StringUtils;
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.springframework.stereotype.Component;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 数据过滤处理

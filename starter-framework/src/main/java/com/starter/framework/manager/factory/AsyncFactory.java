@@ -1,17 +1,9 @@
 package com.starter.framework.manager.factory;
 
-import java.util.TimerTask;
-
-import com.starter.framework.shiro.session.OnlineSession;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import com.starter.common.constant.Constants;
-import com.starter.common.utils.AddressUtils;
-import com.starter.common.utils.LogUtils;
-import com.starter.common.utils.ServletUtils;
-import com.starter.common.utils.ShiroUtils;
-import com.starter.common.utils.StringUtils;
+import com.starter.common.utils.*;
 import com.starter.common.utils.spring.SpringUtils;
+import com.starter.framework.shiro.session.OnlineSession;
 import com.starter.system.domain.SysLogininfor;
 import com.starter.system.domain.SysOperLog;
 import com.starter.system.domain.SysUserOnline;
@@ -19,6 +11,10 @@ import com.starter.system.service.ISysOperLogService;
 import com.starter.system.service.ISysUserOnlineService;
 import com.starter.system.service.impl.SysLogininforServiceImpl;
 import eu.bitwalker.useragentutils.UserAgent;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.TimerTask;
 
 /**
  * 异步工厂（产生任务用）

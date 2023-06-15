@@ -1,18 +1,5 @@
 package com.starter.web.controller.demo.controller;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.multipart.MultipartFile;
 import com.starter.common.core.controller.BaseController;
 import com.starter.common.core.domain.AjaxResult;
 import com.starter.common.core.page.PageDomain;
@@ -24,6 +11,15 @@ import com.starter.common.utils.StringUtils;
 import com.starter.common.utils.poi.ExcelUtil;
 import com.starter.web.controller.demo.domain.CustomerModel;
 import com.starter.web.controller.demo.domain.UserOperateModel;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 操作控制

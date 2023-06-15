@@ -1,12 +1,12 @@
 package com.starter.framework.web.service;
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import com.starter.common.core.domain.entity.SysDictData;
 import com.starter.system.service.ISysDictDataService;
 import com.starter.system.service.ISysDictTypeService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * RuoYi首创 html调用 thymeleaf 实现字典读取

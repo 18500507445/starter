@@ -1,12 +1,12 @@
 package com.starter.framework.shiro.web.filter.sync;
 
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-
-import org.apache.shiro.web.filter.PathMatchingFilter;
 import com.starter.common.constant.ShiroConstants;
 import com.starter.framework.shiro.session.OnlineSession;
 import com.starter.framework.shiro.session.OnlineSessionDAO;
+import org.apache.shiro.web.filter.PathMatchingFilter;
+
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 
 /**
  * 同步Session数据到Db

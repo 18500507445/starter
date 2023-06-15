@@ -1,9 +1,9 @@
 package com.starter.common.core.domain;
 
+import com.starter.common.utils.StringUtils;
+
 import java.util.HashMap;
 import java.util.Objects;
-
-import com.starter.common.utils.StringUtils;
 
 /**
  * 操作消息提醒

@@ -1,13 +1,14 @@
 package com.starter.common.core.domain.entity;
 
-import javax.validation.constraints.*;
-
-import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
 import com.starter.common.annotation.Excel;
 import com.starter.common.annotation.Excel.ColumnType;
 import com.starter.common.constant.UserConstants;
 import com.starter.common.core.domain.BaseEntity;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 /**
  * 字典数据表 sys_dict_data

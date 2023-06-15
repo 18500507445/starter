@@ -1,12 +1,16 @@
 package com.starter.framework.aop;
 
-import java.util.Collection;
-import java.util.Map;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
+import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.support.spring.PropertyPreFilters;
+import com.starter.common.annotation.Log;
+import com.starter.common.core.domain.entity.SysUser;
+import com.starter.common.enums.BusinessStatus;
+import com.starter.common.utils.ServletUtils;
+import com.starter.common.utils.ShiroUtils;
+import com.starter.common.utils.StringUtils;
 import com.starter.framework.manager.AsyncManager;
 import com.starter.framework.manager.factory.AsyncFactory;
+import com.starter.system.domain.SysOperLog;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.AfterThrowing;
@@ -17,15 +21,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.multipart.MultipartFile;
-import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.support.spring.PropertyPreFilters;
-import com.starter.common.annotation.Log;
-import com.starter.common.core.domain.entity.SysUser;
-import com.starter.common.enums.BusinessStatus;
-import com.starter.common.utils.ServletUtils;
-import com.starter.common.utils.ShiroUtils;
-import com.starter.common.utils.StringUtils;
-import com.starter.system.domain.SysOperLog;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.util.Collection;
+import java.util.Map;
 
 /**
  * 操作日志记录处理

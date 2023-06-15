@@ -1,9 +1,9 @@
 package com.starter.generator.domain;
 
-import javax.validation.constraints.NotBlank;
-
 import com.starter.common.core.domain.BaseEntity;
 import com.starter.common.utils.StringUtils;
+
+import javax.validation.constraints.NotBlank;
 
 /**
  * 代码生成业务字段表 gen_table_column

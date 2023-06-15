@@ -1,9 +1,9 @@
 package com.starter.common.config;
 
-import javax.servlet.http.HttpServletRequest;
-
 import com.starter.common.utils.ServletUtils;
 import org.springframework.stereotype.Component;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * 服务相关配置

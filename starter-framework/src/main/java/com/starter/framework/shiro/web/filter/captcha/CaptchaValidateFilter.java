@@ -1,14 +1,14 @@
 package com.starter.framework.shiro.web.filter.captcha;
 
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletRequest;
-
-import org.apache.shiro.web.filter.AccessControlFilter;
 import com.google.code.kaptcha.Constants;
 import com.starter.common.constant.ShiroConstants;
 import com.starter.common.utils.ShiroUtils;
 import com.starter.common.utils.StringUtils;
+import org.apache.shiro.web.filter.AccessControlFilter;
+
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * 验证码过滤器

@@ -1,11 +1,14 @@
 package com.starter.system.service.impl;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
+import com.starter.common.annotation.DataScope;
+import com.starter.common.constant.UserConstants;
+import com.starter.common.core.domain.entity.SysRole;
+import com.starter.common.core.domain.entity.SysUser;
+import com.starter.common.core.text.Convert;
+import com.starter.common.exception.ServiceException;
+import com.starter.common.utils.ShiroUtils;
+import com.starter.common.utils.StringUtils;
+import com.starter.common.utils.spring.SpringUtils;
 import com.starter.system.domain.SysRoleDept;
 import com.starter.system.domain.SysRoleMenu;
 import com.starter.system.domain.SysUserRole;
@@ -17,15 +20,8 @@ import com.starter.system.service.ISysRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import com.starter.common.annotation.DataScope;
-import com.starter.common.constant.UserConstants;
-import com.starter.common.core.domain.entity.SysRole;
-import com.starter.common.core.domain.entity.SysUser;
-import com.starter.common.core.text.Convert;
-import com.starter.common.exception.ServiceException;
-import com.starter.common.utils.ShiroUtils;
-import com.starter.common.utils.StringUtils;
-import com.starter.common.utils.spring.SpringUtils;
+
+import java.util.*;
 
 /**
  * 角色 业务层处理

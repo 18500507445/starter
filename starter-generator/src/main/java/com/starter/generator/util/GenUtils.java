@@ -1,13 +1,13 @@
 package com.starter.generator.util;
 
-import java.util.Arrays;
-
-import org.apache.commons.lang3.RegExUtils;
 import com.starter.common.constant.GenConstants;
 import com.starter.common.utils.StringUtils;
 import com.starter.generator.config.GenConfig;
 import com.starter.generator.domain.GenTable;
 import com.starter.generator.domain.GenTableColumn;
+import org.apache.commons.lang3.RegExUtils;
+
+import java.util.Arrays;
 
 /**
  * 代码生成器 工具类

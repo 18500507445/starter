@@ -1,10 +1,8 @@
 package com.starter.system.service.impl;
 
-import java.io.Serializable;
-import java.util.Date;
-import java.util.Deque;
-import java.util.List;
-
+import com.starter.common.constant.ShiroConstants;
+import com.starter.common.utils.DateUtils;
+import com.starter.common.utils.StringUtils;
 import com.starter.system.domain.SysUserOnline;
 import com.starter.system.mapper.SysUserOnlineMapper;
 import com.starter.system.service.ISysUserOnlineService;
@@ -12,9 +10,11 @@ import org.apache.shiro.cache.Cache;
 import org.apache.shiro.cache.ehcache.EhCacheManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.starter.common.constant.ShiroConstants;
-import com.starter.common.utils.DateUtils;
-import com.starter.common.utils.StringUtils;
+
+import java.io.Serializable;
+import java.util.Date;
+import java.util.Deque;
+import java.util.List;
 
 /**
  * 在线用户 服务层处理

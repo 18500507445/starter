@@ -1,9 +1,9 @@
 package com.starter.common.utils.uuid;
 
-import java.util.concurrent.atomic.AtomicInteger;
-
 import com.starter.common.utils.DateUtils;
 import com.starter.common.utils.StringUtils;
+
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author wzh 序列生成类

@@ -1,9 +1,9 @@
 package com.starter.framework.web.domain.server;
 
-import java.lang.management.ManagementFactory;
-
 import com.starter.common.utils.Arith;
 import com.starter.common.utils.DateUtils;
+
+import java.lang.management.ManagementFactory;
 
 /**
  * JVM相关信息

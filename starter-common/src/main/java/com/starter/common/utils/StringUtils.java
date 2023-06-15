@@ -1,15 +1,10 @@
 package com.starter.common.utils;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
+import com.starter.common.constant.Constants;
 import com.starter.common.core.text.StrFormatter;
 import org.springframework.util.AntPathMatcher;
-import com.starter.common.constant.Constants;
+
+import java.util.*;
 
 /**
  * 字符串工具类

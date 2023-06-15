@@ -1,18 +1,5 @@
 package com.starter.system.service.impl;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
-import javax.annotation.PostConstruct;
-
-import com.starter.system.mapper.SysDictDataMapper;
-import com.starter.system.mapper.SysDictTypeMapper;
-import com.starter.system.service.ISysDictTypeService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import com.starter.common.constant.UserConstants;
 import com.starter.common.core.domain.Ztree;
 import com.starter.common.core.domain.entity.SysDictData;
@@ -21,6 +8,19 @@ import com.starter.common.core.text.Convert;
 import com.starter.common.exception.ServiceException;
 import com.starter.common.utils.DictUtils;
 import com.starter.common.utils.StringUtils;
+import com.starter.system.mapper.SysDictDataMapper;
+import com.starter.system.mapper.SysDictTypeMapper;
+import com.starter.system.service.ISysDictTypeService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import javax.annotation.PostConstruct;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * 字典 业务层处理

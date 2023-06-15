@@ -1,13 +1,12 @@
 package com.starter.system.domain;
 
+import com.starter.common.annotation.Excel;
+import com.starter.common.annotation.Excel.ColumnType;
+import com.starter.common.core.domain.BaseEntity;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 import java.util.Date;
-
-import com.starter.common.annotation.Excel;
-import com.starter.common.annotation.Excel.ColumnType;
-import com.starter.common.core.domain.BaseEntity;
 
 /**
  * 操作日志记录表 oper_log

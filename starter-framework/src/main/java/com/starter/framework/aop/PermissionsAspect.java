@@ -1,12 +1,12 @@
 package com.starter.framework.aop;
 
+import com.starter.common.core.context.PermissionContextHolder;
+import com.starter.common.utils.StringUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.springframework.stereotype.Component;
-import com.starter.common.core.context.PermissionContextHolder;
-import com.starter.common.utils.StringUtils;
 
 /**
  * 自定义权限拦截器，将权限字符串放到当前请求中以便用于多个角色匹配符合要求的权限

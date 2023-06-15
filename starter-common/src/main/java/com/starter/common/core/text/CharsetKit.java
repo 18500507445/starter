@@ -1,9 +1,9 @@
 package com.starter.common.core.text;
 
+import com.starter.common.utils.StringUtils;
+
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-
-import com.starter.common.utils.StringUtils;
 
 /**
  * 字符集工具类

@@ -1,11 +1,11 @@
 package com.starter.common.utils;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import com.alibaba.fastjson.JSONObject;
 import com.starter.common.config.GlobalConfig;
 import com.starter.common.constant.Constants;
 import com.starter.common.utils.http.HttpUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * 获取地址类

@@ -1,8 +1,11 @@
 package com.starter.web.controller.system;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
+import com.starter.common.core.controller.BaseController;
+import com.starter.common.core.domain.AjaxResult;
+import com.starter.common.core.text.Convert;
+import com.starter.common.utils.ServletUtils;
+import com.starter.common.utils.StringUtils;
+import com.starter.framework.web.service.ConfigService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.UsernamePasswordToken;
@@ -14,12 +17,9 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import com.starter.common.core.controller.BaseController;
-import com.starter.common.core.domain.AjaxResult;
-import com.starter.common.core.text.Convert;
-import com.starter.common.utils.ServletUtils;
-import com.starter.common.utils.StringUtils;
-import com.starter.framework.web.service.ConfigService;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * 登录验证

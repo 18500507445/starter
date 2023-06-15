@@ -1,11 +1,11 @@
 package com.starter.web.controller.demo.domain;
 
-import java.util.Date;
-
 import com.starter.common.annotation.Excel;
 import com.starter.common.annotation.Excel.Type;
 import com.starter.common.core.domain.BaseEntity;
 import com.starter.common.utils.DateUtils;
+
+import java.util.Date;
 
 public class UserOperateModel extends BaseEntity {
     private static final long serialVersionUID = 1L;

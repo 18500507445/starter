@@ -1,14 +1,11 @@
 package com.starter.framework.shiro.web.filter.kickout;
 
-import java.io.IOException;
-import java.io.Serializable;
-import java.util.ArrayDeque;
-import java.util.Deque;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.starter.common.constant.ShiroConstants;
+import com.starter.common.core.domain.AjaxResult;
+import com.starter.common.core.domain.entity.SysUser;
+import com.starter.common.utils.ServletUtils;
+import com.starter.common.utils.ShiroUtils;
 import org.apache.shiro.cache.Cache;
 import org.apache.shiro.cache.CacheManager;
 import org.apache.shiro.session.Session;
@@ -17,12 +14,15 @@ import org.apache.shiro.session.mgt.SessionManager;
 import org.apache.shiro.subject.Subject;
 import org.apache.shiro.web.filter.AccessControlFilter;
 import org.apache.shiro.web.util.WebUtils;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.starter.common.constant.ShiroConstants;
-import com.starter.common.core.domain.AjaxResult;
-import com.starter.common.core.domain.entity.SysUser;
-import com.starter.common.utils.ServletUtils;
-import com.starter.common.utils.ShiroUtils;
+
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.Serializable;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 /**
  * 登录帐号控制过滤器

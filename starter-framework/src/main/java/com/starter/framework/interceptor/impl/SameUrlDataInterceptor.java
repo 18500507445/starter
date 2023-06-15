@@ -1,14 +1,14 @@
 package com.starter.framework.interceptor.impl;
 
-import java.util.HashMap;
-import java.util.Map;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-
-import org.springframework.stereotype.Component;
 import com.starter.common.annotation.RepeatSubmit;
 import com.starter.common.json.JSON;
 import com.starter.framework.interceptor.RepeatSubmitInterceptor;
+import org.springframework.stereotype.Component;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 判断请求url和数据是否和上一次相同，
