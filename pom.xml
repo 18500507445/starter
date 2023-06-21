@@ -56,7 +56,7 @@
         <hutool.version>5.8.17</hutool.version>
         <xxl-job.version>2.3.1</xxl-job.version>
         <lombok.version>1.18.24</lombok.version>
-        <fastjson.version>1.2.83</fastjson.version>
+        <fastjson.version>2.0.20</fastjson.version>
     </properties>
 
     <!-- 依赖声明 -->
