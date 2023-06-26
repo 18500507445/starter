@@ -37,6 +37,11 @@ logging:
     com.starter: info
     org.springframework: warn
 
+# 线上log路径
+log:
+  path: /opt/logbak/starter-api
+#  path: /Users/wangzehui/Documents/opt/logbak/starter-api
+
 # 用户配置
 user:
   password:
