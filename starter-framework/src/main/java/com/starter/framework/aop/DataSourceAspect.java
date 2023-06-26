@@ -58,7 +58,6 @@ public class DataSourceAspect {
         if (Objects.nonNull(dataSource)) {
             return dataSource;
         }
-
         return AnnotationUtils.findAnnotation(signature.getDeclaringType(), DataSource.class);
     }
 }

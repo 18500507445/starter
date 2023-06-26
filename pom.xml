@@ -53,8 +53,8 @@
         <commons.fileupload.version>1.4</commons.fileupload.version>
         <poi.version>4.1.2</poi.version>
         <velocity.version>2.3</velocity.version>
-        <hutool.version>5.8.17</hutool.version>
-        <xxl-job.version>2.3.1</xxl-job.version>
+        <hutool.version>5.8.20</hutool.version>
+        <xxl-job.version>2.4.0</xxl-job.version>
         <lombok.version>1.18.24</lombok.version>
         <fastjson.version>2.0.20</fastjson.version>
     </properties>
