@@ -45,7 +45,7 @@
         <shiro.version>1.10.0</shiro.version>
         <thymeleaf.extras.shiro.version>2.1.0</thymeleaf.extras.shiro.version>
         <bitwalker.version>1.21</bitwalker.version>
-        <mybatis-spring-boot.version>2.2.2</mybatis-spring-boot.version>
+        <mybatis-spring-boot.version>3.0.2</mybatis-spring-boot.version>
         <pagehelper.boot.version>1.4.7</pagehelper.boot.version>
         <oshi.version>6.3.0</oshi.version>
         <swagger.version>3.0.0</swagger.version>
@@ -55,7 +55,6 @@
         <velocity.version>2.3</velocity.version>
         <hutool.version>5.8.20</hutool.version>
         <xxl-job.version>2.4.0</xxl-job.version>
-        <lombok.version>1.18.24</lombok.version>
         <fastjson.version>2.0.20</fastjson.version>
     </properties>
 
@@ -255,7 +254,7 @@
             <!-- 消息模块 -->
             <dependency>
                 <groupId>com.starter</groupId>
-                <artifactId>starter-jms</artifactId>
+                <artifactId>starter-mq</artifactId>
                 <version>${starter.version}</version>
             </dependency>
 
