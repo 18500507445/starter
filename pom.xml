@@ -45,7 +45,8 @@
         <shiro.version>1.10.0</shiro.version>
         <thymeleaf.extras.shiro.version>2.1.0</thymeleaf.extras.shiro.version>
         <bitwalker.version>1.21</bitwalker.version>
-        <mybatis-spring-boot.version>3.0.2</mybatis-spring-boot.version>
+        <!-- 此版本不要动升级的话，目前spring-boot版本不支持 -->
+        <mybatis-spring-boot.version>2.3.1</mybatis-spring-boot.version>
         <pagehelper.boot.version>1.4.7</pagehelper.boot.version>
         <oshi.version>6.3.0</oshi.version>
         <swagger.version>3.0.0</swagger.version>
