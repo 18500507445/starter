@@ -4,6 +4,7 @@ import cn.hutool.json.JSONUtil;
 import com.starter.business.entity.param.BaseParam;
 import com.starter.common.core.controller.BaseController;
 import com.starter.common.core.domain.AjaxResult;
+import com.starter.common.utils.spring.SpringUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,6 +27,8 @@ public class DemoController extends BaseController {
     @PostMapping("demo")
     @ResponseBody
     public AjaxResult demo(BaseParam param) {
+        boolean dev = SpringUtils.isDev();
+        System.out.println("dev = " + dev);
         return AjaxResult.success(JSONUtil.parseObj(param));
     }
 }
