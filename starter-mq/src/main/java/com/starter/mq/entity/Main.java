@@ -5,5 +5,5 @@ package com.starter.mq.entity;
  * @author: wzh
  * @date: 2023/4/14 09:02
  */
-public class A {
+public class Main {
 }
