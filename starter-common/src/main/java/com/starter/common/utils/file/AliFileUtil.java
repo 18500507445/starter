@@ -12,7 +12,6 @@ public class AliFileUtil {
     }
 
     public static String upload() {
-
         return "";
     }
 }

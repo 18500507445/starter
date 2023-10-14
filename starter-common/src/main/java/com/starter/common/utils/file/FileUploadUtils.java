@@ -8,6 +8,7 @@ import com.starter.common.exception.file.InvalidExtensionException;
 import com.starter.common.utils.DateUtils;
 import com.starter.common.utils.StringUtils;
 import com.starter.common.utils.uuid.Seq;
+import lombok.Getter;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -40,14 +41,11 @@ public class FileUploadUtils {
     /**
      * 默认上传的地址
      */
+    @Getter
     private static String defaultBaseDir = GlobalConfig.getProfile();
 
     public static void setDefaultBaseDir(String defaultBaseDir) {
         FileUploadUtils.defaultBaseDir = defaultBaseDir;
-    }
-
-    public static String getDefaultBaseDir() {
-        return defaultBaseDir;
     }
 
     /**

@@ -30,10 +30,6 @@ public final class ServiceException extends RuntimeException {
         this.message = message;
     }
 
-    public String getDetailMessage() {
-        return detailMessage;
-    }
-
     public ServiceException setDetailMessage(String detailMessage) {
         this.detailMessage = detailMessage;
         return this;

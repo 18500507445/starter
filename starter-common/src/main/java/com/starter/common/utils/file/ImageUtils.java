@@ -3,6 +3,7 @@ package com.starter.common.utils.file;
 import com.starter.common.config.GlobalConfig;
 import com.starter.common.constant.Constants;
 import com.starter.common.utils.StringUtils;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.util.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,6 +13,8 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Arrays;
 
 /**
@@ -19,15 +22,15 @@ import java.util.Arrays;
  *
  * @author wzh
  */
+@Slf4j
 public class ImageUtils {
-    private static final Logger log = LoggerFactory.getLogger(ImageUtils.class);
 
     public static byte[] getImage(String imagePath) {
         InputStream is = getFile(imagePath);
         try {
             return IOUtils.toByteArray(is);
         } catch (Exception e) {
-            log.error("图片加载异常 {}", e);
+            log.error("图片加载异常", e);
             return null;
         } finally {
             IOUtils.closeQuietly(is);
@@ -40,7 +43,7 @@ public class ImageUtils {
             result = Arrays.copyOf(result, result.length);
             return new ByteArrayInputStream(result);
         } catch (Exception e) {
-            log.error("获取图片异常 {}", e);
+            log.error("获取图片异常", e);
         }
         return null;
     }
@@ -66,11 +69,11 @@ public class ImageUtils {
                 // 本机地址
                 String localPath = GlobalConfig.getProfile();
                 String downloadPath = localPath + StringUtils.substringAfter(url, Constants.RESOURCE_PREFIX);
-                in = new FileInputStream(downloadPath);
+                in = Files.newInputStream(Paths.get(downloadPath));
             }
             return IOUtils.toByteArray(in);
         } catch (Exception e) {
-            log.error("获取文件路径异常 {}", e);
+            log.error("获取文件路径异常", e);
             return null;
         } finally {
             IOUtils.closeQuietly(in);
