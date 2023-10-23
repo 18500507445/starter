@@ -40,9 +40,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <druid.version>1.2.18</druid.version>
+        <druid.version>1.2.20</druid.version>
         <kaptcha.version>2.3.2</kaptcha.version>
-        <shiro.version>1.10.0</shiro.version>
+        <shiro.version>1.12.0</shiro.version>
         <thymeleaf.extras.shiro.version>2.1.0</thymeleaf.extras.shiro.version>
         <bitwalker.version>1.21</bitwalker.version>
         <!-- 不要升级了，springboot3之前最高次版本 -->
