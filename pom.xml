@@ -45,9 +45,7 @@
         <shiro.version>1.12.0</shiro.version>
         <thymeleaf.extras.shiro.version>2.1.0</thymeleaf.extras.shiro.version>
         <bitwalker.version>1.21</bitwalker.version>
-        <!-- 不要升级了，springboot3之前最高次版本 -->
-        <mybatis.boot.version>2.3.1</mybatis.boot.version>
-        <pagehelper.boot.version>1.4.7</pagehelper.boot.version>
+        <pagehelper.boot.version>2.0.0</pagehelper.boot.version>
         <oshi.version>6.3.0</oshi.version>
         <swagger.version>3.0.0</swagger.version>
         <commons.io.version>2.13.0</commons.io.version>
@@ -57,6 +55,9 @@
         <hutool.version>5.8.20</hutool.version>
         <xxl-job.version>2.4.0</xxl-job.version>
         <fastjson.version>2.0.40</fastjson.version>
+
+        <!-- 不要升级了，springboot3之前最高次版本 -->
+        <mybatis.boot.version>2.3.1</mybatis.boot.version>
     </properties>
 
     <!-- 依赖声明 -->
