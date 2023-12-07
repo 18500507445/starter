@@ -6,6 +6,7 @@
     <artifactId>starter</artifactId>
     <groupId>com.starter</groupId>
     <version>starter-1.0</version>
+    <packaging>pom</packaging>
 
     <name>starter</name>
     <description>快速开发api(接口)和admin(后台)</description>
@@ -21,6 +22,7 @@
         <module>starter-admin</module>
         <module>starter-api</module>
         <module>starter-common</module>
+        <module>starter-dependencies</module>
         <module>starter-framework</module>
         <module>starter-system</module>
         <module>starter-generator</module>
@@ -28,238 +30,24 @@
         <module>starter-platform</module>
         <module>starter-job</module>
         <module>starter-mq</module>
-
     </modules>
 
-    <packaging>pom</packaging>
-
     <properties>
-        <starter.version>starter-1.0</starter.version>
+        <boot.maven.version>2.7.18</boot.maven.version>
         <java.version>1.8</java.version>
-        <boot.version>2.7.18</boot.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
-        <druid.version>1.2.20</druid.version>
-        <kaptcha.version>2.3.2</kaptcha.version>
-        <shiro.version>1.12.0</shiro.version>
-        <thymeleaf.extras.shiro.version>2.1.0</thymeleaf.extras.shiro.version>
-        <bitwalker.version>1.21</bitwalker.version>
-        <pagehelper.boot.version>2.0.0</pagehelper.boot.version>
-        <oshi.version>6.3.0</oshi.version>
-        <swagger.version>3.0.0</swagger.version>
-        <commons.io.version>2.13.0</commons.io.version>
-        <commons.fileupload.version>1.5</commons.fileupload.version>
-        <poi.version>5.2.3</poi.version>
-        <velocity.version>2.3</velocity.version>
-        <hutool.version>5.8.20</hutool.version>
-        <xxl-job.version>2.4.0</xxl-job.version>
-        <fastjson.version>2.0.40</fastjson.version>
-
-        <!-- 不要升级了，springboot3之前最高次版本 -->
-        <mybatis.boot.version>2.3.1</mybatis.boot.version>
     </properties>
 
     <!-- 依赖声明 -->
     <dependencyManagement>
         <dependencies>
-            <!-- SpringBoot的依赖配置-->
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${boot.version}</version>
+                <groupId>com.starter</groupId>
+                <artifactId>starter-dependencies</artifactId>
+                <version>1.0-SNAPSHOT</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
-            <!-- 阿里数据库连接池 -->
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>druid-spring-boot-starter</artifactId>
-                <version>${druid.version}</version>
-            </dependency>
-
-            <!-- 验证码 -->
-            <dependency>
-                <groupId>com.github.penggle</groupId>
-                <artifactId>kaptcha</artifactId>
-                <version>${kaptcha.version}</version>
-            </dependency>
-
-            <!-- Shiro核心框架 -->
-            <dependency>
-                <groupId>org.apache.shiro</groupId>
-                <artifactId>shiro-core</artifactId>
-                <version>${shiro.version}</version>
-            </dependency>
-
-            <!-- Shiro使用Spring框架 -->
-            <dependency>
-                <groupId>org.apache.shiro</groupId>
-                <artifactId>shiro-spring</artifactId>
-                <version>${shiro.version}</version>
-            </dependency>
-
-            <!-- Shiro使用EhCache缓存框架 -->
-            <dependency>
-                <groupId>org.apache.shiro</groupId>
-                <artifactId>shiro-ehcache</artifactId>
-                <version>${shiro.version}</version>
-            </dependency>
-
-            <!-- thymeleaf模板引擎和shiro框架的整合 -->
-            <dependency>
-                <groupId>com.github.theborakompanioni</groupId>
-                <artifactId>thymeleaf-extras-shiro</artifactId>
-                <version>${thymeleaf.extras.shiro.version}</version>
-            </dependency>
-
-            <!-- 解析客户端操作系统、浏览器等 -->
-            <dependency>
-                <groupId>eu.bitwalker</groupId>
-                <artifactId>UserAgentUtils</artifactId>
-                <version>${bitwalker.version}</version>
-            </dependency>
-
-            <!-- SpringBoot集成mybatis框架 -->
-            <dependency>
-                <groupId>org.mybatis.spring.boot</groupId>
-                <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>${mybatis.boot.version}</version>
-            </dependency>
-
-            <!-- pageHelper 分页插件 -->
-            <dependency>
-                <groupId>com.github.pagehelper</groupId>
-                <artifactId>pagehelper-spring-boot-starter</artifactId>
-                <version>${pagehelper.boot.version}</version>
-            </dependency>
-
-            <!-- 获取系统信息 -->
-            <dependency>
-                <groupId>com.github.oshi</groupId>
-                <artifactId>oshi-core</artifactId>
-                <version>${oshi.version}</version>
-            </dependency>
-
-            <!-- Swagger3依赖 -->
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-boot-starter</artifactId>
-                <version>${swagger.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>io.swagger</groupId>
-                        <artifactId>swagger-models</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-
-            <!-- io常用工具类 -->
-            <dependency>
-                <groupId>commons-io</groupId>
-                <artifactId>commons-io</artifactId>
-                <version>${commons.io.version}</version>
-            </dependency>
-
-            <!-- 文件上传工具类 -->
-            <dependency>
-                <groupId>commons-fileupload</groupId>
-                <artifactId>commons-fileupload</artifactId>
-                <version>${commons.fileupload.version}</version>
-            </dependency>
-
-            <!-- excel工具 -->
-            <dependency>
-                <groupId>org.apache.poi</groupId>
-                <artifactId>poi-ooxml</artifactId>
-                <version>${poi.version}</version>
-            </dependency>
-
-            <!-- velocity代码生成使用模板 -->
-            <dependency>
-                <groupId>org.apache.velocity</groupId>
-                <artifactId>velocity-engine-core</artifactId>
-                <version>${velocity.version}</version>
-            </dependency>
-
-            <!-- 阿里JSON解析器 -->
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>fastjson</artifactId>
-                <version>${fastjson.version}</version>
-            </dependency>
-
-            <!-- 糊涂工具类，当前工具类非常全面 API https://apidoc.gitee.com/loolly/hutool-all -->
-            <dependency>
-                <groupId>cn.hutool</groupId>
-                <artifactId>hutool-all</artifactId>
-                <version>${hutool.version}</version>
-            </dependency>
-
-            <!--xxl-job -->
-            <dependency>
-                <groupId>com.xuxueli</groupId>
-                <artifactId>xxl-job-core</artifactId>
-                <version>${xxl-job.version}</version>
-            </dependency>
-
-            <!-- 核心模块 -->
-            <dependency>
-                <groupId>com.starter</groupId>
-                <artifactId>starter-framework</artifactId>
-                <version>${starter.version}</version>
-            </dependency>
-
-            <!-- 通用工具 -->
-            <dependency>
-                <groupId>com.starter</groupId>
-                <artifactId>starter-common</artifactId>
-                <version>${starter.version}</version>
-            </dependency>
-
-            <!-- 代码生成 -->
-            <dependency>
-                <groupId>com.starter</groupId>
-                <artifactId>starter-generator</artifactId>
-                <version>${starter.version}</version>
-            </dependency>
-
-            <!-- 系统模块 -->
-            <dependency>
-                <groupId>com.starter</groupId>
-                <artifactId>starter-system</artifactId>
-                <version>${starter.version}</version>
-            </dependency>
-
-            <!-- 业务模块 -->
-            <dependency>
-                <groupId>com.starter</groupId>
-                <artifactId>starter-business</artifactId>
-                <version>${starter.version}</version>
-            </dependency>
-
-            <!-- 后台模块 -->
-            <dependency>
-                <groupId>com.starter</groupId>
-                <artifactId>starter-platform</artifactId>
-                <version>${starter.version}</version>
-            </dependency>
-
-            <!-- 消息模块 -->
-            <dependency>
-                <groupId>com.starter</groupId>
-                <artifactId>starter-mq</artifactId>
-                <version>${starter.version}</version>
-            </dependency>
-
-            <!-- 任务模块 -->
-            <dependency>
-                <groupId>com.starter</groupId>
-                <artifactId>starter-job</artifactId>
-                <version>${starter.version}</version>
-            </dependency>
-
         </dependencies>
     </dependencyManagement>
 
