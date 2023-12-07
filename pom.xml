@@ -232,13 +232,6 @@
                 <version>${starter.version}</version>
             </dependency>
 
-            <!-- 接口api -->
-            <dependency>
-                <groupId>com.starter</groupId>
-                <artifactId>starter-api</artifactId>
-                <version>${starter.version}</version>
-            </dependency>
-
             <!-- 业务模块 -->
             <dependency>
                 <groupId>com.starter</groupId>
