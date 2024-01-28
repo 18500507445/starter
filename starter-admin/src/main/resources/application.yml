@@ -40,7 +40,7 @@ logging:
 # 线上log路径
 log:
   path: /opt/logbak/starter-admin
-#  path: /Users/wangzehui/Documents/Logs/starter-admin
+#  path: /Users/wangzehui/logs/starter-admin
 
 # 用户配置
 user:

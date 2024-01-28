@@ -40,7 +40,7 @@ logging:
 # 线上log路径
 log:
   path: /opt/logbak/starter-api
-#  path: /Users/wangzehui/Documents/Logs/starter-api
+#  path: /Users/wangzehui/logs/starter-api
 
 # 用户配置
 user:
