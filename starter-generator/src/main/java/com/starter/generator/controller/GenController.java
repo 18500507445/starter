@@ -19,10 +19,10 @@ import com.starter.generator.domain.GenTable;
 import com.starter.generator.domain.GenTableColumn;
 import com.starter.generator.service.IGenTableColumnService;
 import com.starter.generator.service.IGenTableService;
+import lombok.AllArgsConstructor;
 import org.apache.commons.io.IOUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.authz.annotation.RequiresRoles;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.annotation.Validated;
@@ -41,14 +41,14 @@ import java.util.Map;
  */
 @Controller
 @RequestMapping("/tool/gen")
+@AllArgsConstructor
 public class GenController extends BaseController {
-    private String prefix = "tool/gen";
 
-    @Autowired
-    private IGenTableService genTableService;
+    private final String prefix = "tool/gen";
 
-    @Autowired
-    private IGenTableColumnService genTableColumnService;
+    private final IGenTableService genTableService;
+
+    private final IGenTableColumnService genTableColumnService;
 
     @RequiresPermissions("tool:gen:view")
     @GetMapping()
@@ -192,7 +192,7 @@ public class GenController extends BaseController {
                     }
                 }
             }
-            List<GenTable> tableList = genTableService.selectDbTableListByNames(tableNames.toArray(new String[tableNames.size()]));
+            List<GenTable> tableList = genTableService.selectDbTableListByNames(tableNames.toArray(new String[0]));
             String operName = Convert.toStr(PermissionUtils.getPrincipalProperty("loginName"));
             genTableService.importGenTable(tableList, operName);
             return AjaxResult.success();
