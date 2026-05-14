@@ -6,9 +6,9 @@ spring:
         druid:
             # 主库数据源
             master:
-                url: jdbc:mysql://xx.x.xxx.xxx:3306/starter?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+                url: jdbc:mysql://127.0.0.1:3306/starter?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
                 username: root
-                password: 'root'
+                password: '123456'
             # 从库数据源
             slave:
                 # 从数据源开关/默认关闭
@@ -57,9 +57,9 @@ spring:
                         multi-statement-allow: true
 
     rabbitmq:
-        addresses: xxx.xx.x.xxx:5672
+        addresses: 127.0.0.1:5672
         username: root #账号
-        password: 'root' #密码
+        password: '123456' #密码
         virtual-host: /
         listener:
             simple:

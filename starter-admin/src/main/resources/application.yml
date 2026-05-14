@@ -39,8 +39,7 @@ logging:
 
 # 线上log路径
 log:
-  path: /opt/logbak/starter-admin
-#  path: /Users/wangzehui/logs/starter-admin
+  path: /Users/wangzehui/logs/starter-admin
 
 # 用户配置
 user:
@@ -152,7 +151,7 @@ xss:
 # Swagger配置
 swagger:
   # 是否开启swagger
-  enabled: true
+  enabled: false
 
 xxl:
   job:
